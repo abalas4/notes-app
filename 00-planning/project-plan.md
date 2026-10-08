@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). Branch `docs/THM01-pi1-planning`. Started 2026-10-08: tracker-tool + cadence decisions recorded; next: capacity allocation, then `00-planning/PI-1/` records.
+**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). Branch `docs/THM01-pi1-planning`. Started 2026-10-08: tracker-tool + cadence decisions recorded; allocation agreed; next: write `00-planning/PI-1/` records (capacity, WSJF, objectives, ROAM, dependencies, iteration plans) + `10-release/PI-1-release-roadmap.md`, then RAID-001…005 and C-01 migration.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -712,6 +712,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | 1.6a | **Style guide v1.0 Approved** with P-01 outline-strong `#857F76` for control boundaries · P-02 no Teal text on note colours · P-03 Ink-soft unchecked checkbox border · P-04 portrait only in MVP · P-05 empty / loading / error / offline patterns from Story copy · P-06 motion 150/250/300 ms, honour Remove animations · P-07 adaptive app icon + plain splash (artwork = `[DESIGN]` WI in slice 1) | User |
 | 2026-10-08 | 1.5 | Backlog tracker tool = **local workspace tooling** (outside git, reads the standard artefact folders only; no Story/ALM lifecycle). **One team** with one capacity; backlog views filtered by component (API / Mobile / Enabler) | User |
 | 2026-10-08 | 1.5 | **PI-1 cadence:** 2-week iterations; 4 development iterations + 1 IP; user full-time; PI-1 starts 2026-10-08 — I1 10-08→10-21 · I2 10-22→11-04 · I3 11-05→11-18 · I4 11-19→12-02 · IP 12-03→12-16. Capacity baseline 8 pts/iteration (plugin new-team rule) until 3 iterations of velocity exist | User |
+| 2026-10-08 | 1.5 | **PI-1 capacity allocation:** Business 55 % · Enablers 25 % · tech debt/upgrades/reliability 5 % (below the 15–20 % default: greenfield, no debt yet — agreement recorded in `objectives.md`; back to 15 % from PI-2) · defects 0 % · buffer 15 % | User |
 
 ### Session log
 | Date | Session summary |
