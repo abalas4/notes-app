@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). 1.6a style guide Approved v1.0 on branch `docs/THM01-style-guide` (awaiting PR).
+**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). Branch `docs/THM01-pi1-planning`. Started 2026-10-08: tracker-tool decisions first.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -645,7 +645,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 - [x] 1.2 Features + NFR Features — **done 2026-10-08 — approved and merged in PR #3 (`a5d0496`); proposed SLOs and WSJF confirmed**: EPC01 → FTR01–06, FTR10 (split), NFR FTR11–14; EPC02 → FTR07–09
 - [x] 1.3 User Stories + ACs (story-reviewer findings resolved) — **done 2026-10-08 — merged in PR #4 (`57231a7`)**: 72 Stories; story-reviewer run on all 14 Features, findings applied; 14 PO decisions (1.3-Q)
 - [x] 1.4 Coverage audit (coverage-auditor) — **done 2026-10-08**: verdict ATTENTION NEEDED (advisory); stage expectation met for both Epics; 0 broken links; 5 gaps recorded as RAID-001…005 (+ RAID-006 HLD assumptions) in `00-planning/raid-log.md`; fixes deferred by the user
-- [x] 1.6a Style guide record `06-design/ux/style-guide.md` SG-01…SG-15 — **done 2026-10-08: Approved v1.0** (UX Lead, PO, Tech Lead); P-01…P-07 accepted; SG-13/SG-14 N/A. Moved before 1.5: Feature DoR for [Mobile] Features requires it (`06-alm-rules.md`)
+- [x] 1.6a Style guide record `06-design/ux/style-guide.md` SG-01…SG-15 — **done 2026-10-08: Approved v1.0** (UX Lead, PO, Tech Lead), merged in PR #7 (`bc08e38`); P-01…P-07 accepted; SG-13/SG-14 N/A. Moved before 1.5: Feature DoR for [Mobile] Features requires it (`06-alm-rules.md`)
 - [ ] 1.5 PI plan, RAID log, PI release roadmap (`/safe-alm-release`) — then **migrate this plan into the standard artefacts and delete `project-plan.md`** (C-01); the tracker continues in `00-planning/PI-1/`
 - [ ] 1.6 UX spec per Feature mapped to W1–W12 (+ empty / error states)
 - [ ] 1.7 HLD, DFMEA, LLD per Feature + ADRs + OpenAPI 3.1 — **includes R-NOTIF: vet Notifee (or pick fallback) before LLD approval**
