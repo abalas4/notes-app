@@ -42,17 +42,18 @@ PI Target          : PI-1
 Release Tag        : None — forecast at PI Planning (step 1.5)
 Feature Type       : New
 Original Feature   : N/A
-Linked Stories     : TBD at step 1.3 ([Non-Functional] Stories per surface)
+Linked Stories     : THM01STR42 [API], THM01STR43 [Mobile] [Android], THM01STR44 [API] (step 1.3, after story review)
 HLD Reference      : THM01FTR11-HLD
 LLD Reference      : THM01FTR11-LLD
 
 Dependencies       : THM01FTR06, THM01FTR01, THM01FTR07 (CI gates)
 Constraints        : Public repository (plan §2 rule 7); no Secrets Manager (SSM SecureString)
-ALM Status         : New
+Coverage notes     : AC-03 (CVE / secret fails CI) is delivered by THM01STR29 and THM01STR31 (FTR07). The fix-time SLO (Critical 7 days, High 30 days) is owned by operations vulnerability management (step 6.1).
+ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ NFR category
                      · ⚠️ SLOs proposed from the plan and plugin defaults — Product Owner confirms by approving
                      this PR · ✅ Test strategy · ✅ 4 ACs · ✅ Sized M · ✅ PI Target · ✅ HLD / LLD IDs · ✅ Owner
-                     ⚠️ Child Stories — step 1.3
+                     ✅ Child Stories (step 1.3)
 DoD Check          : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

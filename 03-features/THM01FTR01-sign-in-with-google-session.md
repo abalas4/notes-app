@@ -26,8 +26,10 @@ Acceptance Criteria:
          password is entered in the app
   AC-02: Given the owner is signed in, When the app is closed and reopened (including after a phone
          restart), Then Home opens without a sign-in prompt while the refresh token is valid
-  AC-03: Given the owner is signed in, When they choose "Sign out", Then all tokens are removed from
-         the Android Keystore-backed storage and the Sign-in screen is shown
+  AC-03: Given the owner is signed in, When they choose "Sign out" and confirm, Then the refresh
+         token is revoked at Cognito, all tokens are removed from the Keystore-backed storage, all
+         scheduled reminder notifications are cancelled, and the Sign-in screen is shown (decisions
+         Q1, Q13)
   AC-04: Given a request to any API route except health, When it has no access token or an expired /
          invalid one, Then the API returns 401 with the standard error body and no data
   AC-05: Given the sign-in page is open, When the owner cancels it or the network fails, Then the app
@@ -40,7 +42,7 @@ Sprint Target     : TBD at PI Planning (step 1.5) — planned slice 1
 Release Roll-up   : None yet — derived from child Stories (forecast at PI Planning)
 Feature Type      : New
 Original Feature  : N/A
-Linked Stories    : TBD at step 1.3 (≥ 1 [API], ≥ 1 [Mobile] [Android])
+Linked Stories    : THM01STR04 [API], THM01STR05 [Mobile] [Android], THM01STR06 [Mobile] [Android], THM01STR55 [Mobile] [Android] (step 1.3, after story review)
 HLD Reference     : THM01FTR01-HLD
 LLD Reference     : THM01FTR01-LLD
 
@@ -52,13 +54,13 @@ Constraints       : Cognito Lite tier; Google federation only in production (D-0
 Platform scope    : Android, phones, portrait; minimum OS version TBD in the HLD (target ≥ 95 % of
                     active devices); React Native bare CLI (D-01); device matrix plan §5.3; distribution
                     by CI-signed APK, no store (C-05).
-ALM Status        : New
+ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at 03-features/THM01FTR01-<slug>.md · ✅ Parent Epic linked · ✅ Type tags
                     · ✅ Surfaces filled (API, Mobile Android) · ✅ Feature Type New / Original N/A
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs in Gherkin · ✅ Sized M · ✅ WSJF
                     · ✅ PI Target · ✅ HLD / LLD IDs assigned · ✅ Dependencies and constraints · ✅ Owner
                     ⚠️ Sprint Target — PI Planning (1.5)
-                    ⚠️ Child Stories — step 1.3 (≥ 3 needed at Ready)
+                    ✅ Child Stories (step 1.3)
                     ⚠️ Style guide Approved with SG-15 — step 1.6a
                     ⚠️ Platform scope: minimum OS version and technology ADR — HLD (1.7)
 DoD Check         : ⚠️ Not started

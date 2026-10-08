@@ -45,7 +45,7 @@ templates and folder standard. In particular:
 | C-05 | Testing §16 UAT: `[Mobile]` UAT on a **real device** with a **store-track build** (Play internal testing), not a simulator, before Story Done | Story Done planned on the emulator only; distribution by sideload / Firebase App Distribution | **Approved deviation (user, 2026-10-08)**: no Play Store, because this is not a real product. Story Done = (1) automated suites green on the emulator matrix, (2) UAT on your **personal Android phone** with the **CI-signed release APK** installed over adb (the same binary later sent to Device Farm), against the `dev` stack, **and** (3) the same suites green on **AWS Device Farm** real devices. Recorded as an ADR at Step 01 | ✅ deviation approved (ADR at Step 01) |
 | C-06 | Testing §19 MOB-01: every Story AC on each device tier (oldest and latest supported OS, small and large phone, low-end Android); emulators allowed; at least one real device before release | Emulator plan had 2 AVDs, no oldest-OS or low-end tier | Emulator matrix extended (§5.3). Real devices: your phone (UAT) + Device Farm hardening before release | ✅ fixed |
 | C-07 | Way of working §6.4: branch protection on `main`, required checks, one approval per PR | **GitHub Free does not offer branch protection or rulesets on private repos**, and GitHub does not let a PR author approve their own PR (you are the only person) | Either **GitHub Pro (US$4/month)**, which enables protection and required checks, **or** an ADR accepting process-only protection. Either way, "approval" = your recorded approval comment on the PR after the code-review report, then you merge → **Q5, D-11** | ✅ resolved 2026-10-08: **public repo** (Q5) → branch protection + required checks are free and enforced. Only the self-approval part remains (D-11 ADR) |
-| C-08 | Implementation MA-18: release builds signed by CI only; the same signed binary is promoted internal → beta → production. Testing MOB-10: store pre-launch report and Data safety | No store tracks (C-05 deviation) | CI signs the release APK (keystore in GitHub secrets, never in the repo). That **one binary** goes to your phone, to Device Farm, and to the GitHub Release asset for REL-x.y.z. Store promotion and MOB-10 are **N/A by the same ADR** as C-05. MobSF and the privacy/permission review still run (V45, MOB-09) | ✅ planned (deviation via C-05 ADR) |
+| C-08 | Implementation MA-18: release builds signed by CI only; the same signed binary is promoted internal → beta → production. Testing MOB-10: store pre-launch report and Data safety | No store tracks (C-05 deviation) | CI signs the release APK (keystore in GitHub secrets, never in the repo). That **one binary** goes to your phone, to Device Farm, and to the GitHub Release asset for REL-x.y.z. Store promotion and MOB-10 are **N/A by the same ADR** as C-05. MobSF and the privacy/permission review still run (V45, MOB-09) | ✅ planned (deviation via C-05 ADR) — **Update 2026-10-08 (Q12):** signing happens only in the manual release-hardening workflow; that one signed APK goes to phone UAT, the Device Farm regression and the GitHub Release. Slice testing uses the CI debug build (bundled JS) |
 | C-09 | Stack profile `lang-python-fastapi` assumes SQLAlchemy + Alembic; no profile exists for React Native | DynamoDB and React Native are outside the profiles | ADRs at Step 01: DynamoDB repository layer + item-schema-version migration tests; RN mobile gates via `mobile-01-apps.md` with JS commands supplied as PARENT evidence | Step 01 (ADRs) |
 
 ---
@@ -80,6 +80,7 @@ target release tag set at PI planning (1.5).
 | L-02 | **Rich-text "Aa" formatting** in the W4 editor | D-09, 2026-10-08 | Plain text; "Aa" button hidden | Candidates `react-native-enriched` (native) or `10tap-editor` (WebView); needs a stored format + migration of plain-text bodies |
 | L-03 | **Server push reminders** (FCM/APNs + EventBridge Scheduler) | D-06, 2026-10-08 | Local notifications on the device | Needed for reminders across multiple devices |
 | L-04 | **Cognito native accounts** + Google ↔ native linking | D-05, 2026-10-08 | Google federation only | Phase B in §4.2 |
+| L-05 | **Trash view** (restore / delete forever, e.g. 7 days) | Story review Q3, 2026-10-08 | Delete = 5 s Undo, then gone | Drawer entry hidden until then; server soft-delete already exists |
 
 ---
 
@@ -352,7 +353,7 @@ DFMEA detection items until the Device Farm phase.
 | Source control | **Public** GitHub repo (Q5), trunk-based, branch protection + required checks on `main` (C-07). Public-repo hygiene in §2 rule 7 | Free |
 | CI | GitHub Actions (standard runners free and unmetered on public repos): API gates, app unit tests, Android release build, SAST (Semgrep), IaC scan (checkov), secrets (gitleaks), licence check | Free |
 | CD | GitHub OIDC → least-privilege IAM deploy role (no long-lived keys) → build + push image to ECR → `tofu plan` (artifact on the PR) → `tofu apply` of the reviewed plan | Free |
-| Android distribution | **No Play Store** (C-05 deviation). The CI-signed release APK is installed on your phone with `adb install`, uploaded to Device Farm, and attached to the GitHub Release for each REL tag | Free |
+| Android distribution | **No Play Store** (C-05 deviation). During slices the CI debug APK (bundled JS) is installed; for release hardening the CI-signed release APK (Q12) is installed on your phone with `adb install`, uploaded to Device Farm, and attached to the GitHub Release for each REL tag | Free |
 | Environments | See the environment table below | ~$0 |
 
 **Environments (user decision 2026-10-08: no public API until it is needed)**
@@ -424,7 +425,7 @@ The first two budgets are free.
   state (W1–W12, offline, permission denied, notification actions); accessibility (TalkBack labels, 48 dp targets).
 - **Story Done (Step 04, C-05 deviation)** needs all three, in this order:
   1. **Emulator matrix:** automated suites green (§5.3, MOB-01…MOB-09). Free, and run as often as needed.
-  2. **Personal phone:** with the CI-signed release APK and the `dev` stack (deployed for the window):
+  2. **Personal phone:** with the CI-built APK for the commit (debug build during slices; the signed APK in release hardening, Q12) and the `dev` stack (deployed for the window):
      a. the **same automated Espresso + Appium suites** run on your phone over adb (wireless pairing or USB,
         reusing rnlab_aws `scripts/adb-pair-connect.sh` and the Docker test runner). Free. **Wireless adb to your
         phone is already proven in rnlab_aws** (user, 2026-10-08), so wireless is the default and USB the fallback.
@@ -625,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.2 written on branch `docs/THM01-features` (FTR01–14; Epics updated) — awaiting PO review/merge via PR #3 from `docs/THM01-features-content` (PR #2 merged only the 1.1-approval commit — feature commits had landed on local `main` after an unexpected branch switch; moved and rebased) (merge = confirms proposed SLOs and WSJF). Then 1.3 Stories. Open: Trash view in MVP? (FTR04, decide at UX spec).
+**Current phase:** Step 01 (requirements) · **Next step:** 1.3 written on branch `docs/THM01-stories` (72 Stories STR01–72; story review applied; Features/Epic aligned with decisions 1.3-Q) — awaiting PO review/merge via PR. Then 1.4 coverage audit.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -641,8 +642,8 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 - [x] 0.1 git init, `.gitignore`, `.gitattributes`, `.editorconfig`, `.pre-commit-config.yaml`, README, `.github/SECURITY.md`, `CODEOWNERS`, workspace `CLAUDE.md` (outside the repo); create `notes-app/` (repo) in the workspace, move `00-planning/` into it, move `design_style_guide/` → workspace `jot-design-source/` (C-02); structure check: nothing at the root outside §9 — done 2026-10-08 (commit `eda4450`; repo-local author = GitHub noreply email)
 - [x] 0.2 First push to https://github.com/abalas4/notes-app (public; repo created by user 2026-10-08) — done 2026-10-08: pushed; branch protection on `main` (PR required, approvals unticked per D-11, conversation resolution, no bypass, no force-push/deletion; status checks added when CI exists); pre-commit 4.6.2 + gitleaks hook installed and passing
 - [x] 1.1 Strategic Theme + Epic (`/safe-alm-requirements`) — include the R-TX Enabler Feature (§8.1) — **done 2026-10-08 — approved and merged in PR #1 (`d7176c4`)**: THM01, THM01CAP01 (Business), THM01CAP02 (Enabler), THM01EPC01 (Business, Android MVP), THM01EPC02 (Enabler, R-TX/R-AWS). Feature IDs reserved: FTR01–06 (EPC01), FTR07–09 (EPC02)
-- [~] 1.2 Features + NFR Features — **written 2026-10-08, awaiting PR approval**: EPC01 → FTR01–06, FTR10 (split), NFR FTR11–14; EPC02 → FTR07–09
-- [ ] 1.3 User Stories + ACs (story-reviewer findings resolved)
+- [x] 1.2 Features + NFR Features — **done 2026-10-08 — approved and merged in PR #3 (`a5d0496`); proposed SLOs and WSJF confirmed**: EPC01 → FTR01–06, FTR10 (split), NFR FTR11–14; EPC02 → FTR07–09
+- [~] 1.3 User Stories + ACs (story-reviewer findings resolved) — **written 2026-10-08, awaiting PR approval**: 72 Stories; story-reviewer run on all 14 Features, findings applied; 14 PO decisions (1.3-Q)
 - [ ] 1.4 Coverage audit (coverage-auditor)
 - [ ] 1.5 PI plan, RAID log, PI release roadmap (`/safe-alm-release`) — then **migrate this plan into the standard artefacts and delete `project-plan.md`** (C-01); the tracker continues in `00-planning/PI-1/`
 - [ ] 1.6a Style guide record `06-design/ux/style-guide.md` SG-01…SG-15 built from `../jot-design-source/design.md` — **user approves** (C-03)
@@ -697,6 +698,10 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | 1.1 | Hierarchy: THM01 → CAP01 Business → EPC01 app MVP; CAP02 Enabler → EPC02 delivery automation (R-TX/R-AWS). Metrics: adoption ≥ 5 notes/week, reminders on time ≥ 99 %, crash-free ≥ 99.5 % / ANR ≤ 0.47 %, API cost ≤ US$1/month. Compliance Regimes: None. Roles shown as `Role (@abalas4)` | User |
 | 2026-10-08 | 1.1 | **Approved:** THM01 Approved; CAP01/CAP02 and EPC01/EPC02 → Portfolio Backlog (PR #1 merged) | User |
 | 2026-10-08 | 1.2 | 'Organise and find' split into FTR04 Labels + FTR10 Search/sort/filter/select (skill rule: two user journeys); NFR Features FTR11–14 with proposed SLOs | Claude (PO confirms in PR) |
+| 2026-10-08 | 1.2 | **Approved:** FTR01–14 → Refined; FTR04/FTR10 split, proposed SLOs and WSJF confirmed (PR #3 merged) | User |
+| 2026-10-08 | 1.3-Q | Story-review business rules (all as recommended except Q12): Q1 sign-out cancels phone reminders · Q2 edit conflict → latest version + own text to clipboard · Q3 no Trash in MVP (→ L-05) · Q4 restore only within Undo (server accepts 30 s) · Q5 "Hide completed" saved with the note · Q6 snooze moves only this occurrence · Q7 offline Mark done → notification stays "Couldn't save — tap to retry" · Q8 reminder due while phone off → fire after boot, marked overdue · Q9 Open on deleted note → Home + "Note not found" · Q10 case-only label rename allowed · Q11 dev-down keeps Cognito dev pool, state bucket, image repo · Q13 sign-out revokes refresh token at Cognito · Q14 "Later today" hidden after 21:00 | User |
+| 2026-10-08 | 1.3-Q12 | **Signed APK only for release hardening.** All other builds (PRs, main, emulator, phone, Device Farm during slices) use the CI debug build with bundled JS; a manual release-hardening workflow signs the APK that goes to phone UAT, Device Farm regression and the GitHub Release (C-08 still met) | User |
+| 2026-10-08 | 1.3 | Settled by Claude (PO did not object): numeric limits → defaults in LLD; Epic 95 % = pivot floor vs 99 % target (note added); Feature metrics sign-ins/week, find ≤ 5 s, labels in use → UAT observation only | Claude |
 | 2026-10-08 | — | §1.3 deferred-capabilities register (L-01…L-04) added | Claude |
 | 2026-10-08 | — | Mockups (wireframe.html W1–W12 + hi-fi canvas) validated as buildable in React Native; caveats → D-09, D-10 | Claude |
 
@@ -709,3 +714,4 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 (session 3, cont.) | Phase 0.1 done: workspace split into `notes-app/` (repo) + `jot-design-source/` + local `CLAUDE.md`; repo files created; `git init` with origin; first commit with the noreply author email. Next: 0.2 push by user. |
 | 2026-10-08 (session 3, cont.) | 0.2 done (push, branch protection, pre-commit 4.6.2). Step 01 started: 1.1 artefacts written on branch `docs/THM01-strategy-and-epic`; awaiting PR approval. |
 | 2026-10-08 (session 3, cont.) | 1.2 written (FTR01–14). Recovery: feature commits had landed on local `main` after an external branch switch, so PR #2 merged only eb5d290; commits rebased onto `origin/main` as branch `docs/THM01-features-content`, tracker rows lost in the rebase restored. Claude now checks the current branch before every commit. |
+| 2026-10-08 (session 3, cont.) | 1.2 merged (PR #3). 1.3: 53 Stories written, 14 story reviews run, 14 PO decisions recorded (Q12 changed: signed builds only for release hardening), review fixes applied → 72 Stories; Features/Epic aligned. Tools + review notes in workspace story-review-1.3/. Awaiting PR. |

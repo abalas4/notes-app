@@ -26,8 +26,9 @@ Acceptance Criteria:
          "Completed" with strike-through and the progress shows "1 of N done"
   AC-02: Given a list with several items, When the owner drags an item by its handle to a new position,
          Then the new order is saved and is the same after reopening the app
-  AC-03: Given a list with completed items, When the owner chooses "Hide completed", "Uncheck all" or
-         "Delete completed", Then exactly that action is applied and saved
+  AC-03: Given a list with completed items, When the owner chooses "Hide completed", "Uncheck all"
+         or "Delete completed", Then exactly that action is applied and saved with the note, so
+         "Hide completed" stays on after reopening (decision Q5)
   AC-04: Given a list note, When the owner converts it to a text note, Then each item becomes one line
          of the body (checked state dropped after a confirmation), and converting a text note to a
          list turns each non-empty line into an item
@@ -41,7 +42,7 @@ Sprint Target     : TBD at PI Planning (step 1.5) — planned slice 3
 Release Roll-up   : None yet — derived from child Stories
 Feature Type      : New
 Original Feature  : N/A
-Linked Stories    : TBD at step 1.3 (≥ 1 [API], ≥ 1 [Mobile] [Android])
+Linked Stories    : THM01STR12 [API], THM01STR13 [Mobile] [Android], THM01STR14 [Mobile] [Android], THM01STR59 [API], THM01STR60 [Mobile] [Android], THM01STR61 [Mobile] [Android] (step 1.3, after story review)
 HLD Reference     : THM01FTR03-HLD
 LLD Reference     : THM01FTR03-LLD
 
@@ -49,12 +50,12 @@ Dependencies      : THM01FTR02 (note entity, colours, pin, archive, delete); THM
 Constraints       : Online-only (D-07); item order and checked state stored on the server with the
                     note's version (optimistic concurrency); UX per screens W5, W10.
 Platform scope    : As THM01FTR01.
-ALM Status        : New
+ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                     · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner
                     ⚠️ Sprint Target — PI Planning (1.5)
-                    ⚠️ Child Stories — step 1.3
+                    ✅ Child Stories (step 1.3)
                     ⚠️ Style guide Approved with SG-15 — step 1.6a
                     ⚠️ Platform scope minimum OS version — HLD (1.7)
 DoD Check         : ⚠️ Not started

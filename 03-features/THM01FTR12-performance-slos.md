@@ -29,8 +29,8 @@ Test Strategy      : k6 smoke-load test against the local stack and `dev`; cold-
 Acceptance Criteria:
   AC-01: Given `dev` at 5 requests per second for 10 minutes, When the k6 test runs, Then API p95 latency is
          below 300 ms and the error rate is below 1 %
-  AC-02: Given the function has been idle long enough to start cold, When the first request arrives, Then it
-         completes in under 1 s
+  AC-02: Given the function has been idle long enough to start cold, When 20 forced cold starts are
+         measured server-side (X-Ray), Then p95 is below 1 s
   AC-03: Given the low-end emulator tier with 500 notes, When the app is cold-started, Then Home is
          interactive within 2 s and scrolling stays at 60 fps
 
@@ -39,15 +39,15 @@ PI Target          : PI-1
 Release Tag        : None — forecast at PI Planning (step 1.5)
 Feature Type       : New
 Original Feature   : N/A
-Linked Stories     : TBD at step 1.3
+Linked Stories     : THM01STR45 [API], THM01STR46 [API], THM01STR47 [Mobile] [Android], THM01STR71 [Mobile] [Android] (step 1.3, after story review)
 HLD Reference      : THM01FTR12-HLD
 LLD Reference      : THM01FTR12-LLD
 
-ALM Status         : New
+ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ NFR category
                      · ⚠️ SLOs proposed (plan §12 and plugin mobile defaults) — Product Owner confirms by
                      approving this PR · ✅ Test strategy · ✅ 3 ACs · ✅ Sized S · ✅ PI Target · ✅ HLD / LLD IDs
-                     · ✅ Owner · ⚠️ Child Stories — step 1.3
+                     · ✅ Owner · ✅ Child Stories (step 1.3)
 DoD Check          : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

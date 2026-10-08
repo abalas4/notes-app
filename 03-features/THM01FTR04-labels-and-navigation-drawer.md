@@ -40,24 +40,22 @@ Sprint Target     : TBD at PI Planning (step 1.5) — planned slice 4
 Release Roll-up   : None yet — derived from child Stories
 Feature Type      : New
 Original Feature  : N/A
-Linked Stories    : TBD at step 1.3 (≥ 1 [API], ≥ 1 [Mobile] [Android])
+Linked Stories    : THM01STR15 [API], THM01STR16 [Mobile] [Android], THM01STR17 [Mobile] [Android], THM01STR18 [Mobile] [Android], THM01STR62 [API] (step 1.3, after story review)
 HLD Reference     : THM01FTR04-HLD
 LLD Reference     : THM01FTR04-LLD
 
 Dependencies      : THM01FTR02 (notes); THM01FTR06
 Constraints       : Online-only (D-07); UX per screens W6, W7, W8.
-Open question     : The drawer wireframe (W7) also shows "Trash" and "Settings". Settings is needed for
-                    sign-out (THM01FTR01). Whether a Trash view (restore / delete forever) is in the MVP
-                    is decided by the Product Owner at the UX spec (step 1.6); until then delete = 5 s
-                    undo (THM01FTR02 AC-03).
+Decision          : No Trash view in the MVP (story review Q3, 2026-10-08) — the W7 "Trash" entry is
+                    hidden; deferred as L-05. Settings stays (sign-out, THM01STR55). Label counts are
+                    active notes (not archived, not deleted).
 Platform scope    : As THM01FTR01.
-ALM Status        : New
+ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                     · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner
-                    ⚠️ Sprint Target — PI Planning (1.5) · ⚠️ Child Stories — step 1.3
+                    ⚠️ Sprint Target — PI Planning (1.5) · ✅ Child Stories (step 1.3)
                     ⚠️ Style guide Approved with SG-15 — step 1.6a · ⚠️ Platform scope minimum OS — HLD (1.7)
-                    ⚠️ Open question on Trash — UX spec (1.6)
 DoD Check         : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
