@@ -80,6 +80,7 @@ target release tag set at PI planning (1.5).
 | L-02 | **Rich-text "Aa" formatting** in the W4 editor | D-09, 2026-10-08 | Plain text; "Aa" button hidden | Candidates `react-native-enriched` (native) or `10tap-editor` (WebView); needs a stored format + migration of plain-text bodies |
 | L-03 | **Server push reminders** (FCM/APNs + EventBridge Scheduler) | D-06, 2026-10-08 | Local notifications on the device | Needed for reminders across multiple devices |
 | L-04 | **Cognito native accounts** + Google ↔ native linking | D-05, 2026-10-08 | Google federation only | Phase B in §4.2 |
+| L-05 | **Trash view** (restore / delete forever, e.g. 7 days) | Story review Q3, 2026-10-08 | Delete = 5 s Undo, then gone | Drawer entry hidden until then; server soft-delete already exists |
 
 ---
 
@@ -625,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.3 User Stories on branch `docs/THM01-stories`. Story ID map (fixed): FTR06 STR01–03 · FTR01 STR04–06 · FTR02 STR07–11 · FTR03 STR12–14 · FTR04 STR15–18 · FTR10 STR19–22 · FTR05 STR23–28 · FTR07 STR29–31 · FTR08 STR32–35 · FTR09 STR36–41 · FTR11 STR42–44 · FTR12 STR45–47 · FTR13 STR48–50 · FTR14 STR51–53. Sub-progress: ✅ STR01–53 written, slugs fixed, Features linked · ✅ story-reviewer done for all 14 Features (~120 findings, mostly missing failure-path ACs, dependencies and splits; notes kept outside the repo in workspace `story-review-1.3/`) · ⏳ PO decisions on business rules → apply rewrites → PR · then story-reviewer per Feature. Open: Trash view (FTR04); sign-out keeps reminders? (STR06).
+**Current phase:** Step 01 (requirements) · **Next step:** 1.3 User Stories on branch `docs/THM01-stories`. Story ID map (fixed): FTR06 STR01–03 · FTR01 STR04–06 · FTR02 STR07–11 · FTR03 STR12–14 · FTR04 STR15–18 · FTR10 STR19–22 · FTR05 STR23–28 · FTR07 STR29–31 · FTR08 STR32–35 · FTR09 STR36–41 · FTR11 STR42–44 · FTR12 STR45–47 · FTR13 STR48–50 · FTR14 STR51–53. Sub-progress: ✅ STR01–53 written, slugs fixed, Features linked · ✅ story-reviewer done for all 14 Features (~120 findings, mostly missing failure-path ACs, dependencies and splits; notes kept outside the repo in workspace `story-review-1.3/`) · ✅ PO decisions recorded (decisions log 1.3-Q) · ⏳ apply rewrites per Feature → PR · then story-reviewer per Feature. Open: Trash view (FTR04); sign-out keeps reminders? (STR06).
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -698,6 +699,9 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | 1.1 | **Approved:** THM01 Approved; CAP01/CAP02 and EPC01/EPC02 → Portfolio Backlog (PR #1 merged) | User |
 | 2026-10-08 | 1.2 | 'Organise and find' split into FTR04 Labels + FTR10 Search/sort/filter/select (skill rule: two user journeys); NFR Features FTR11–14 with proposed SLOs | Claude (PO confirms in PR) |
 | 2026-10-08 | 1.2 | **Approved:** FTR01–14 → Refined; FTR04/FTR10 split, proposed SLOs and WSJF confirmed (PR #3 merged) | User |
+| 2026-10-08 | 1.3-Q | Story-review business rules (all as recommended except Q12): Q1 sign-out cancels phone reminders · Q2 edit conflict → latest version + own text to clipboard · Q3 no Trash in MVP (→ L-05) · Q4 restore only within Undo (server accepts 30 s) · Q5 "Hide completed" saved with the note · Q6 snooze moves only this occurrence · Q7 offline Mark done → notification stays "Couldn't save — tap to retry" · Q8 reminder due while phone off → fire after boot, marked overdue · Q9 Open on deleted note → Home + "Note not found" · Q10 case-only label rename allowed · Q11 dev-down keeps Cognito dev pool, state bucket, image repo · Q13 sign-out revokes refresh token at Cognito · Q14 "Later today" hidden after 21:00 | User |
+| 2026-10-08 | 1.3-Q12 | **Signed APK only for release hardening.** All other builds (PRs, main, emulator, phone, Device Farm during slices) use the CI debug build with bundled JS; a manual release-hardening workflow signs the APK that goes to phone UAT, Device Farm regression and the GitHub Release (C-08 still met) | User |
+| 2026-10-08 | 1.3 | Settled by Claude (PO did not object): numeric limits → defaults in LLD; Epic 95 % = pivot floor vs 99 % target (note added); Feature metrics sign-ins/week, find ≤ 5 s, labels in use → UAT observation only | Claude |
 | 2026-10-08 | — | §1.3 deferred-capabilities register (L-01…L-04) added | Claude |
 | 2026-10-08 | — | Mockups (wireframe.html W1–W12 + hi-fi canvas) validated as buildable in React Native; caveats → D-09, D-10 | Claude |
 
