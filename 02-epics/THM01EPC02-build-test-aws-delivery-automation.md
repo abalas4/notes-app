@@ -75,7 +75,7 @@ WSJF Score        :
 Sizing            : S
 PI Target         : PI-1 (slice 1, Device Farm workflow by slice 2)
 ART(s)            : Jot team (solo)
-Linked Features   : Provisional — IDs reserved here, Feature files written at step 1.2:
+Linked Features   : (step 1.2)
                     THM01FTR07 CI pipeline and quality gates
                     THM01FTR08 Test-execution workflows and phone script (R-TX)
                     THM01FTR09 AWS prerequisites and environments as code (R-AWS)
@@ -104,16 +104,16 @@ Risks             :
 Requirement Coverage Assessment — THM01EPC02                         Product Stage: MVP
   | Type / Category | Status | Artefact ID(s) | Owner | Review / Trigger | Note (target, reason) |
   |---|---|---|---|---|---|
-  | Functional | Defined | THM01FTR07–THM01FTR09 (reserved) | Architecture Lead (@abalas4) | Step 1.2 | Plan §8.1 (R-TX), §8.2 (R-AWS) |
-  | Technical / Enabler | Defined | THM01FTR07–THM01FTR09 (reserved) | Architecture Lead (@abalas4) | Step 1.2 | This whole Epic is enabler work |
+  | Functional | Defined | THM01FTR07–THM01FTR09 | Architecture Lead (@abalas4) | Step 1.3 | Plan §8.1 (R-TX), §8.2 (R-AWS) |
+  | Technical / Enabler | Defined | THM01FTR07–THM01FTR09 | Architecture Lead (@abalas4) | Step 1.3 | This whole Epic is enabler work |
   | Data | N/A | — | — | — | No product data; state files and test reports only |
-  | Interface & Integration | Evolving | THM01FTR08, THM01FTR09 (reserved) | Architecture Lead (@abalas4) | Step 1.7 (HLD) | GitHub OIDC ↔ AWS STS; Device Farm API; Actions artifacts and commit statuses |
+  | Interface & Integration | Evolving | THM01FTR08, THM01FTR09 | Architecture Lead (@abalas4) | Step 1.7 (HLD) | GitHub OIDC ↔ AWS STS; Device Farm API; Actions artifacts and commit statuses |
   | Transition & Migration | N/A | — | — | — | Greenfield |
   | Constraints | Defined | Epic `Constraints` field | Architecture Lead (@abalas4) | — | See field |
   | 1 Performance | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | Initial: PR CI ≤ 15 min; emulator suite ≤ 30 min (not customer-facing) |
   | 2 Scalability | N/A | — | — | — | One developer |
   | 3 Availability & Reliability | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | Initial: flaky-test rerun rate ≤ 5 %; `dev-down` always cleans up |
-  | 4 Security | Evolving | THM01FTR09 (reserved) | Architecture Lead (@abalas4) | Step 1.2 | Least privilege per workflow; permissions boundary; no long-lived keys; Access Analyzer + checkov clean; SHA-pinned actions |
+  | 4 Security | Evolving | THM01FTR07, THM01FTR09 | Architecture Lead (@abalas4) | Step 1.2 | Least privilege per workflow; permissions boundary; no long-lived keys; Access Analyzer + checkov clean; SHA-pinned actions |
   | 5 Compliance & Regulatory | N/A | — | — | — | No regime |
   | 6 Observability & Monitoring | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | Job summaries, artifacts and reports per run; drift issues; budget alerts |
   | 7 Usability & Accessibility | N/A | — | — | — | No end-user screens |
@@ -138,7 +138,7 @@ DoR Check         : ✅ Stored at 02-epics/THM01EPC02-<slug>.md
                     ✅ Benefit Measurement block
                     ✅ Compliance Regimes declared: None
                     ✅ Sized S
-                    ✅ ≥ 3 Features identified (3 reserved)
+                    ✅ ≥ 3 Features identified (3 written at step 1.2)
                     ✅ Risks with likelihood / impact / mitigation
                     ✅ Product Stage MVP
                     ✅ Surfaces declared

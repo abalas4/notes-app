@@ -625,7 +625,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.2 Features + NFR Features via `/safe-alm-requirements` on branch `docs/THM01-features`. Sub-progress: not started.
+**Current phase:** Step 01 (requirements) · **Next step:** 1.2 written on branch `docs/THM01-features` (FTR01–14; Epics updated) — awaiting PO review/merge via PR #3 from `docs/THM01-features-content` (PR #2 merged only the 1.1-approval commit — feature commits had landed on local `main` after an unexpected branch switch; moved and rebased) (merge = confirms proposed SLOs and WSJF). Then 1.3 Stories. Open: Trash view in MVP? (FTR04, decide at UX spec).
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -641,7 +641,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 - [x] 0.1 git init, `.gitignore`, `.gitattributes`, `.editorconfig`, `.pre-commit-config.yaml`, README, `.github/SECURITY.md`, `CODEOWNERS`, workspace `CLAUDE.md` (outside the repo); create `notes-app/` (repo) in the workspace, move `00-planning/` into it, move `design_style_guide/` → workspace `jot-design-source/` (C-02); structure check: nothing at the root outside §9 — done 2026-10-08 (commit `eda4450`; repo-local author = GitHub noreply email)
 - [x] 0.2 First push to https://github.com/abalas4/notes-app (public; repo created by user 2026-10-08) — done 2026-10-08: pushed; branch protection on `main` (PR required, approvals unticked per D-11, conversation resolution, no bypass, no force-push/deletion; status checks added when CI exists); pre-commit 4.6.2 + gitleaks hook installed and passing
 - [x] 1.1 Strategic Theme + Epic (`/safe-alm-requirements`) — include the R-TX Enabler Feature (§8.1) — **done 2026-10-08 — approved and merged in PR #1 (`d7176c4`)**: THM01, THM01CAP01 (Business), THM01CAP02 (Enabler), THM01EPC01 (Business, Android MVP), THM01EPC02 (Enabler, R-TX/R-AWS). Feature IDs reserved: FTR01–06 (EPC01), FTR07–09 (EPC02)
-- [ ] 1.2 Features + NFR Features
+- [~] 1.2 Features + NFR Features — **written 2026-10-08, awaiting PR approval**: EPC01 → FTR01–06, FTR10 (split), NFR FTR11–14; EPC02 → FTR07–09
 - [ ] 1.3 User Stories + ACs (story-reviewer findings resolved)
 - [ ] 1.4 Coverage audit (coverage-auditor)
 - [ ] 1.5 PI plan, RAID log, PI release roadmap (`/safe-alm-release`) — then **migrate this plan into the standard artefacts and delete `project-plan.md`** (C-01); the tracker continues in `00-planning/PI-1/`
@@ -696,6 +696,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | §9a | Repo lives in `notes-app/` inside the local workspace; `CLAUDE.md` and `jot-design-source/` sit in the workspace, outside git | User |
 | 2026-10-08 | 1.1 | Hierarchy: THM01 → CAP01 Business → EPC01 app MVP; CAP02 Enabler → EPC02 delivery automation (R-TX/R-AWS). Metrics: adoption ≥ 5 notes/week, reminders on time ≥ 99 %, crash-free ≥ 99.5 % / ANR ≤ 0.47 %, API cost ≤ US$1/month. Compliance Regimes: None. Roles shown as `Role (@abalas4)` | User |
 | 2026-10-08 | 1.1 | **Approved:** THM01 Approved; CAP01/CAP02 and EPC01/EPC02 → Portfolio Backlog (PR #1 merged) | User |
+| 2026-10-08 | 1.2 | 'Organise and find' split into FTR04 Labels + FTR10 Search/sort/filter/select (skill rule: two user journeys); NFR Features FTR11–14 with proposed SLOs | Claude (PO confirms in PR) |
 | 2026-10-08 | — | §1.3 deferred-capabilities register (L-01…L-04) added | Claude |
 | 2026-10-08 | — | Mockups (wireframe.html W1–W12 + hi-fi canvas) validated as buildable in React Native; caveats → D-09, D-10 | Claude |
 
@@ -707,3 +708,4 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 (session 3) | Answered all pending queries: D-06 local reminders (R-NOTIF caveat), D-07 online-only, D-08 OpenTofu, D-09 plain text, D-10, D-11, Q1 legacy free tier, Q2 981.77 min, Q3 Jot/com.jot.app, Q4 abalas4/notes-app, Q5 public repo, Q6 no licence. Added §1.3 deferred register (L-01…L-04), §2 rules 6 (stable versions) and 7 (public-repo hygiene), DynamoDB cost correction. P-03 done; next Phase 0.1. |
 | 2026-10-08 (session 3, cont.) | Phase 0.1 done: workspace split into `notes-app/` (repo) + `jot-design-source/` + local `CLAUDE.md`; repo files created; `git init` with origin; first commit with the noreply author email. Next: 0.2 push by user. |
 | 2026-10-08 (session 3, cont.) | 0.2 done (push, branch protection, pre-commit 4.6.2). Step 01 started: 1.1 artefacts written on branch `docs/THM01-strategy-and-epic`; awaiting PR approval. |
+| 2026-10-08 (session 3, cont.) | 1.2 written (FTR01–14). Recovery: feature commits had landed on local `main` after an external branch switch, so PR #2 merged only eb5d290; commits rebased onto `origin/main` as branch `docs/THM01-features-content`, tracker rows lost in the rebase restored. Claude now checks the current branch before every commit. |

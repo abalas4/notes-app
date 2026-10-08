@@ -82,14 +82,17 @@ WSJF Score        :
 Sizing            : M
 PI Target         : PI-1
 ART(s)            : Jot team (solo)
-Linked Features   : Provisional — IDs reserved here, Feature files written at step 1.2:
-                    THM01FTR01 Sign-in with Google and account session
-                    THM01FTR02 Text notes
-                    THM01FTR03 Checklists
-                    THM01FTR04 Organise and find (labels, search, sort, select, layout, drawer)
-                    THM01FTR05 Reminders and notifications
-                    THM01FTR06 Jot API service foundation (Implementation)
-                    Non-Functional Features from the coverage rows below are added at step 1.2.
+Linked Features   : (step 1.2)
+                    Business:        THM01FTR01 Sign in with Google and account session
+                                     THM01FTR02 Text notes
+                                     THM01FTR03 Checklists
+                                     THM01FTR04 Labels and navigation drawer
+                                     THM01FTR10 Search, sort, filter and multi-select
+                                                (split from "Organise and find" — two user journeys)
+                                     THM01FTR05 Reminders and notifications
+                    Implementation:  THM01FTR06 Jot API service foundation
+                    Non-Functional:  THM01FTR11 Security baseline · THM01FTR12 Performance SLOs
+                                     THM01FTR13 Availability and reliability · THM01FTR14 Observability and monitoring
 
 Dependencies      : THM01EPC02 — CI pipeline, emulator / phone / Device Farm test runs and the dev
                     AWS environment must exist before the first Story can reach Done.
@@ -116,18 +119,18 @@ Risks             :
 Requirement Coverage Assessment — THM01EPC01                         Product Stage: MVP
   | Type / Category | Status | Artefact ID(s) | Owner | Review / Trigger | Note (target, reason) |
   |---|---|---|---|---|---|
-  | Functional | Defined | THM01FTR01–THM01FTR05 (reserved) | Product Owner (@abalas4) | Step 1.2 | Scope = MVP Definition above; screens W1–W12 |
-  | Technical / Enabler | Defined | THM01FTR06 (reserved); THM01EPC02 | Architecture Lead (@abalas4) | Step 1.2 | API foundation here; delivery runway in THM01EPC02 |
+  | Functional | Defined | THM01FTR01–THM01FTR05, THM01FTR10 | Product Owner (@abalas4) | Step 1.2 | Scope = MVP Definition above; screens W1–W12 |
+  | Technical / Enabler | Defined | THM01FTR06; THM01EPC02 | Architecture Lead (@abalas4) | Step 1.2 | API foundation here; delivery runway in THM01EPC02 |
   | Data | Evolving | — | Architecture Lead (@abalas4) | Step 1.7 (HLD) | Note, checklist, label, reminder entities with `version`, `updatedAt`, soft delete; retention TBD |
-  | Interface & Integration | Evolving | THM01FTR06 (reserved) | Architecture Lead (@abalas4) | Step 1.7 (LLD, OpenAPI 3.1) | REST API `jot-api`; Cognito + Google sign-in; OS notifications |
+  | Interface & Integration | Evolving | THM01FTR06 | Architecture Lead (@abalas4) | Step 1.7 (LLD, OpenAPI 3.1) | REST API `jot-api`; Cognito + Google sign-in; OS notifications |
   | Transition & Migration | N/A | — | Architecture Lead (@abalas4) | — | New product, no existing data. Item-schema-version migration tests cover future changes (C-09) |
   | Constraints | Defined | Epic `Constraints` field | Product Owner (@abalas4) | — | See field |
-  | 1 Performance | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 (NF Feature) | Initial: API p95 < 300 ms warm / < 1 s cold; app cold start ≤ 2 s on the low-end tier; screen transition ≤ 300 ms |
+  | 1 Performance | Evolving | THM01FTR12 | Architecture Lead (@abalas4) | HLD approval (1.7) | Initial: API p95 < 300 ms warm / < 1 s cold; app cold start ≤ 2 s on the low-end tier; screen transition ≤ 300 ms |
   | 2 Scalability | Deferred | — | Architecture Lead (@abalas4) | Before any public distribution | Single user; serverless scales on demand |
-  | 3 Availability & Reliability | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 (NF Feature) | Initial: crash-free users ≥ 99.5 %; ANR ≤ 0.47 %; reminders on time ≥ 99 %; API availability target TBD |
-  | 4 Security | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 (NF Feature) | Initial: OWASP MASVS L1; Cognito JWT on every API route; tokens in Keystore; TLS only; no secrets in the app or the repo; SCA + SAST + secrets scan on every build |
+  | 3 Availability & Reliability | Evolving | THM01FTR13 | Architecture Lead (@abalas4) | HLD approval (1.7) | Initial: crash-free users ≥ 99.5 %; ANR ≤ 0.47 %; reminders on time ≥ 99 %; API availability target TBD |
+  | 4 Security | Evolving | THM01FTR11 | Architecture Lead (@abalas4) | HLD approval (1.7) | Initial: OWASP MASVS L1; Cognito JWT on every API route; tokens in Keystore; TLS only; no secrets in the app or the repo; SCA + SAST + secrets scan on every build |
   | 5 Compliance & Regulatory | N/A | — | Product Owner (@abalas4) | Before any public distribution | Compliance Regimes: None (personal app) |
-  | 6 Observability & Monitoring | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 (NF Feature) | Initial: structured JSON logs with traceId (CloudWatch), X-Ray traces, an alarm per SLO; crash reporting |
+  | 6 Observability & Monitoring | Evolving | THM01FTR14 | Architecture Lead (@abalas4) | HLD approval (1.7) | Initial: structured JSON logs with traceId (CloudWatch), X-Ray traces, an alarm per SLO; crash reporting |
   | 7 Usability & Accessibility | Evolving | — | Product Owner (@abalas4) | Step 1.6a (style guide) | Initial: WCAG 2.1 AA applied to native (TalkBack labels, 48 dp targets, font scaling 200 %) |
   | 8 Maintainability | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | Initial: coverage ≥ 80 % new code; mutation ≥ 60 % business logic; no new Critical SAST findings |
   | 9 Portability & Interoperability | Evolving | — | Architecture Lead (@abalas4) | Step 1.7 (HLD platform scope) | Android minimum version TBD (target ≥ 95 % of devices); iOS-ready codebase; OpenAPI 3.1 |
@@ -151,7 +154,7 @@ DoR Check         : ✅ Stored at 02-epics/THM01EPC01-<slug>.md
                     ✅ Benefit Measurement block (baselines "to measure before release" where new)
                     ✅ Compliance Regimes declared: None
                     ✅ Sized M
-                    ✅ ≥ 3 Features identified (6 reserved)
+                    ✅ ≥ 3 Features identified (11 written at step 1.2)
                     ✅ Risks with likelihood / impact / mitigation
                     ✅ Product Stage MVP
                     ✅ Surfaces declared
