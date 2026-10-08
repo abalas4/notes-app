@@ -9,10 +9,10 @@ Source   : requirements 10-pi-planning.md §1 (new-team rule: 8 pts per full-tim
 
 | Iteration | Dates | Team members × days available | Holidays / leave / training | Normalised capacity (pts) | Historic velocity (last 3) | Planned load (pts) |
 |-----------|-------|-------------------------------|-----------------------------|---------------------------|----------------------------|--------------------|
-| 01 | 2026-10-08 → 2026-10-21 | 1 × 10 | none known | 8 | — (new team) | 8 |
-| 02 | 2026-10-22 → 2026-11-04 | 1 × 10 | none known | 8 | — | 6 |
-| 03 | 2026-11-05 → 2026-11-18 | 1 × 10 | none known | 8 | — | 5 |
-| 04 | 2026-11-19 → 2026-12-02 | 1 × 10 | none known | 8 | — | 3 committed (+ 5 stretch) |
+| 01 | 2026-10-08 → 2026-10-21 | 1 × 10 | none known | 8 | — (new team) | 11 (STR54 pulled in — red string) |
+| 02 | 2026-10-22 → 2026-11-04 | 1 × 10 | none known | 8 | — | 8 |
+| 03 | 2026-11-05 → 2026-11-18 | 1 × 10 | none known | 8 | — | 3 (+ pull-in) |
+| 04 | 2026-11-19 → 2026-12-02 | 1 × 10 | none known | 8 | — | 0 committed (stretch) |
 | IP | 2026-12-03 → 2026-12-16 | 1 × 10 | — | no committed Feature work | — | — |
 | **PI** | | | | **32** | | **22 committed** |
 
