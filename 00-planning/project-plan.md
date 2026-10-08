@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.4 coverage audit (safe-alm-req-coverage-auditor, advisory) on branch `docs/THM01-coverage-audit` — auditor running; findings will be recorded in `00-planning/raid-log.md` (Issues) and the tracker; fixes deferred by the user.
+**Current phase:** Step 01 (requirements) · **Next step:** user merges PR for `docs/THM01-coverage-audit` (1.4 findings recorded). Then 1.5 PI plan, PI release roadmap (`/safe-alm-release`), address RAID-001…005, and migrate this plan into standard artefacts (C-01).
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -644,7 +644,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 - [x] 1.1 Strategic Theme + Epic (`/safe-alm-requirements`) — include the R-TX Enabler Feature (§8.1) — **done 2026-10-08 — approved and merged in PR #1 (`d7176c4`)**: THM01, THM01CAP01 (Business), THM01CAP02 (Enabler), THM01EPC01 (Business, Android MVP), THM01EPC02 (Enabler, R-TX/R-AWS). Feature IDs reserved: FTR01–06 (EPC01), FTR07–09 (EPC02)
 - [x] 1.2 Features + NFR Features — **done 2026-10-08 — approved and merged in PR #3 (`a5d0496`); proposed SLOs and WSJF confirmed**: EPC01 → FTR01–06, FTR10 (split), NFR FTR11–14; EPC02 → FTR07–09
 - [x] 1.3 User Stories + ACs (story-reviewer findings resolved) — **done 2026-10-08 — merged in PR #4 (`57231a7`)**: 72 Stories; story-reviewer run on all 14 Features, findings applied; 14 PO decisions (1.3-Q)
-- [ ] 1.4 Coverage audit (coverage-auditor)
+- [x] 1.4 Coverage audit (coverage-auditor) — **done 2026-10-08**: verdict ATTENTION NEEDED (advisory); stage expectation met for both Epics; 0 broken links; 5 gaps recorded as RAID-001…005 (+ RAID-006 HLD assumptions) in `00-planning/raid-log.md`; fixes deferred by the user
 - [ ] 1.5 PI plan, RAID log, PI release roadmap (`/safe-alm-release`) — then **migrate this plan into the standard artefacts and delete `project-plan.md`** (C-01); the tracker continues in `00-planning/PI-1/`
 - [ ] 1.6a Style guide record `06-design/ux/style-guide.md` SG-01…SG-15 built from `../jot-design-source/design.md` — **user approves** (C-03)
 - [ ] 1.6 UX spec per Feature mapped to W1–W12 (+ empty / error states)
@@ -704,6 +704,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | 1.3 | Settled by Claude (PO did not object): numeric limits → defaults in LLD; Epic 95 % = pivot floor vs 99 % target (note added); Feature metrics sign-ins/week, find ≤ 5 s, labels in use → UAT observation only | Claude |
 | 2026-10-08 | 1.3 | **Approved:** 72 Stories merged (PR #4) | User |
 | 2026-10-08 | 1.4 | Coverage audit: record findings only; fixes deferred to later (user) | User |
+| 2026-10-08 | 1.4 | Coverage audit findings recorded in RAID log (RAID-001…006); not fixed now — user will address later | User |
 | 2026-10-08 | — | §1.3 deferred-capabilities register (L-01…L-04) added | Claude |
 | 2026-10-08 | — | Mockups (wireframe.html W1–W12 + hi-fi canvas) validated as buildable in React Native; caveats → D-09, D-10 | Claude |
 
@@ -717,3 +718,4 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 (session 3, cont.) | 0.2 done (push, branch protection, pre-commit 4.6.2). Step 01 started: 1.1 artefacts written on branch `docs/THM01-strategy-and-epic`; awaiting PR approval. |
 | 2026-10-08 (session 3, cont.) | 1.2 written (FTR01–14). Recovery: feature commits had landed on local `main` after an external branch switch, so PR #2 merged only eb5d290; commits rebased onto `origin/main` as branch `docs/THM01-features-content`, tracker rows lost in the rebase restored. Claude now checks the current branch before every commit. |
 | 2026-10-08 (session 3, cont.) | 1.2 merged (PR #3). 1.3: 53 Stories written, 14 story reviews run, 14 PO decisions recorded (Q12 changed: signed builds only for release hardening), review fixes applied → 72 Stories; Features/Epic aligned. Tools + review notes in workspace story-review-1.3/. Awaiting PR. |
+| 2026-10-08 (session 3, cont.) | 1.3 merged (PR #4). 1.4 coverage audit run: ATTENTION NEEDED (advisory), 5 gaps → RAID-001…005, RAID-006 assumptions; raid-log.md created; full report in workspace audits/. |
