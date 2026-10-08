@@ -48,7 +48,7 @@ LLD Reference      : THM01FTR11-LLD
 
 Dependencies       : THM01FTR06, THM01FTR01, THM01FTR07 (CI gates)
 Constraints        : Public repository (plan §2 rule 7); no Secrets Manager (SSM SecureString)
-ALM Status         : New
+ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ NFR category
                      · ⚠️ SLOs proposed from the plan and plugin defaults — Product Owner confirms by approving
                      this PR · ✅ Test strategy · ✅ 4 ACs · ✅ Sized M · ✅ PI Target · ✅ HLD / LLD IDs · ✅ Owner

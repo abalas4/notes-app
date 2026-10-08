@@ -49,7 +49,7 @@ LLD Reference      : THM01FTR07-LLD
 Dependencies       : GitHub repository settings (owner); first app and API skeletons (THM01FTR06, app shell)
 Constraints        : GitHub-hosted standard runners only (free for public repositories); stable tool
                      versions, exact pins; folder standard (`.github/workflows/`, `scripts/`).
-ALM Status         : New
+ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                      · ✅ Description · ✅ Architectural note · ✅ 4 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                      · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner

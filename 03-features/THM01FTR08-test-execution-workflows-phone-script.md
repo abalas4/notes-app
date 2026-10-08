@@ -52,7 +52,7 @@ LLD Reference      : THM01FTR08-LLD
 Dependencies       : THM01FTR07 (signed APK, CI); THM01FTR09 (roles for `dev` and Device Farm, dev environment)
 Constraints        : Device Farm free minutes are one-time (981.77 left); test code only under `tests/`,
                      helpers under `scripts/` (folder standard); stable versions.
-ALM Status         : New
+ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                      · ✅ Description · ✅ Architectural note · ✅ 4 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                      · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner

@@ -57,7 +57,7 @@ Dependencies       : AWS account (legacy free tier); owner runs the bootstrap; G
                      `aws-admin`, `dev`, `prod`, `device-farm` created by the owner
 Constraints        : OpenTofu (D-08); IaC standard IAC-01…IAC-16; no Secrets Manager; no AWS identifiers in the
                      public repository; Claude never reads the owner's AWS credentials (plan §2 rule 5).
-ALM Status         : New
+ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                      · ✅ Description · ✅ Architectural note · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                      · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner

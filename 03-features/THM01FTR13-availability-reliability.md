@@ -44,7 +44,7 @@ Linked Stories     : TBD at step 1.3
 HLD Reference      : THM01FTR13-HLD
 LLD Reference      : THM01FTR13-LLD
 
-ALM Status         : New
+ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ NFR category
                      · ✅ App SLOs measurable (Epic metrics) · ⚠️ API availability target TBD — HLD (1.7)
                      · ✅ Test strategy · ✅ 4 ACs · ✅ Sized M · ✅ PI Target · ✅ HLD / LLD IDs · ✅ Owner

@@ -55,7 +55,7 @@ Constraints       : Local notifications (D-06); notification library provisional
                     vetting before LLD approval (plan risk R-NOTIF); Android 13+ notification permission
                     and Android 14+ exact-alarm rules; server push is L-03; UX per W9, W11, W12.
 Platform scope    : As THM01FTR01.
-ALM Status        : New
+ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs · ✅ Sized L · ✅ WSJF · ✅ PI Target
                     · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner

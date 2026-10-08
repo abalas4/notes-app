@@ -52,7 +52,7 @@ LLD Reference      : THM01FTR06-LLD
 Dependencies       : THM01FTR09 (AWS environments, roles and Cognito); THM01FTR07 (CI gates)
 Constraints        : AWS always-free first; no Secrets Manager (SSM SecureString); stable versions,
                      exact pins, 7-day cooling period; Docker multi-stage, non-root; public repository.
-ALM Status         : New
+ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces (API) · ✅ Feature
                      Type · ✅ Description · ✅ Architectural note · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                      · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner

@@ -51,7 +51,7 @@ Constraints       : Plain text only in the MVP (D-09); online-only (D-07); every
                     `version` and `updatedAt` and deletes are soft, so offline-first (L-01) can be added
                     later without a breaking change; UX per the Jot design system screens W1, W4.
 Platform scope    : As THM01FTR01 (Android phones; minimum OS version TBD in the HLD).
-ALM Status        : New
+ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                     · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner

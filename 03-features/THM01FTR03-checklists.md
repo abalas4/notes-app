@@ -49,7 +49,7 @@ Dependencies      : THM01FTR02 (note entity, colours, pin, archive, delete); THM
 Constraints       : Online-only (D-07); item order and checked state stored on the server with the
                     note's version (optimistic concurrency); UX per screens W5, W10.
 Platform scope    : As THM01FTR01.
-ALM Status        : New
+ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                     · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner

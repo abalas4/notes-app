@@ -51,7 +51,7 @@ Open question     : The drawer wireframe (W7) also shows "Trash" and "Settings".
                     is decided by the Product Owner at the UX spec (step 1.6); until then delete = 5 s
                     undo (THM01FTR02 AC-03).
 Platform scope    : As THM01FTR01.
-ALM Status        : New
+ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                     · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner

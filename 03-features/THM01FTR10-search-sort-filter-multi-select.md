@@ -49,7 +49,7 @@ Dependencies      : THM01FTR02, THM01FTR03 (content to search); THM01FTR04 (labe
 Constraints       : Online-only (D-07) — search runs against the API or the loaded list (decided in the
                     HLD); single user, so no search service is needed at this scale; UX per W1, W2, W3.
 Platform scope    : As THM01FTR01.
-ALM Status        : New
+ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                     · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner
