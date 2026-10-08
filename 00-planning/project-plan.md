@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 · **Next step:** C-01 plan migration on branch `docs/THM01-plan-migration` (PI-1 plan merged in PR #8): ADRs → `06-design/adr/`, rules → `CONTRIBUTING.md`, decisions / risks → RAID log, tracker → local workspace `progress.md`; then delete this file. After that: PI-1 iteration 01 (STR01 + STR29).
+**Current phase:** Step 01 · **Next step:** C-01 migration on `docs/THM01-plan-migration`: ADR-001…012, CONTRIBUTING.md, RAID-007…021 done and committed; remaining: fix references to this file, README, delete this file, CLAUDE.md. Tracker now also in the local workspace `progress.md`.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
