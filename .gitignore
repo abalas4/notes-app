@@ -1,0 +1,77 @@
+# --- Secrets and local credentials (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.keystore
+*.jks
+keystore.properties
+google-services.json
+GoogleService-Info.plist
+aws/.aws-creds.env
+
+# --- OpenTofu (state lives in S3; lock files ARE committed, IAC-02) ---
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+crash.log
+crash.*.log
+
+# --- Generated test output (structure standard §11: never committed) ---
+htmlcov/
+08-test-artefacts/reports/
+.alm-runs/
+coverage/
+.coverage
+.coverage.*
+junit*.xml
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.mutmut-cache
+*.egg-info/
+
+# --- Node / React Native ---
+node_modules/
+.metro-health-check*
+npm-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# --- Android ---
+.gradle/
+build/
+local.properties
+*.apk
+*.aab
+*.idsig
+.cxx/
+.externalNativeBuild/
+captures/
+
+# --- iOS (later) ---
+Pods/
+DerivedData/
+xcuserdata/
+*.ipa
+*.xcworkspace/xcuserdata/
+
+# --- Local tooling and OS files ---
+.claude/
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+*.log
