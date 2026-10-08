@@ -22,7 +22,7 @@ Usability Check : Proposed "Not required — single-user app; the owner is the P
 Screen / flow:
   Layout        : Android notification: title, body or "N of M done · next: <item>", label; three actions. Snooze sheet: In 10 minutes, In 1 hour, Tonight 8:00 PM, Tomorrow 9:00 AM, Pick date and time
   Key Elements  : Actions Mark done / Snooze / Open; snooze presets
-  States        : Default | Applying | Error (Retry in app) | Offline (action queued? — no: shown as failed with Retry, D-07)
+  States        : Default | Applying | Error (Retry in app) | Offline (action shown as failed with Retry — online-only, D-07)
   Navigation    : Open → note editor; Snooze → app opens on the snooze sheet (D-10); deep link jot://note/{id} validated against the signed-in user's notes
 Device behaviour:
   Offline       : Online-only (D-07): offline banner; actions that need the API are disabled or fail visibly with Retry; nothing is shown as saved until the API confirms
