@@ -110,21 +110,21 @@ Requirement Coverage Assessment — THM01EPC02                         Product S
   | Interface & Integration | Evolving | THM01FTR08, THM01FTR09 | Architecture Lead (@abalas4) | Step 1.7 (HLD) | GitHub OIDC ↔ AWS STS; Device Farm API; Actions artifacts and commit statuses |
   | Transition & Migration | N/A | — | — | — | Greenfield |
   | Constraints | Defined | Epic `Constraints` field | Architecture Lead (@abalas4) | — | See field |
-  | 1 Performance | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | Initial: PR CI ≤ 15 min; emulator suite ≤ 30 min (not customer-facing) |
+  | 1 Performance | Evolving | THM01FTR07, THM01FTR08 | Architecture Lead (@abalas4) | THM01FTR07 HLD (PI-1 iteration 01) | Initial: PR CI ≤ 15 min; emulator suite ≤ 30 min (not customer-facing) |
   | 2 Scalability | N/A | — | — | — | One developer |
-  | 3 Availability & Reliability | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | Initial: flaky-test rerun rate ≤ 5 %; `dev-down` always cleans up |
-  | 4 Security | Evolving | THM01FTR07, THM01FTR09 | Architecture Lead (@abalas4) | Step 1.2 | Least privilege per workflow; permissions boundary; no long-lived keys; Access Analyzer + checkov clean; SHA-pinned actions |
+  | 3 Availability & Reliability | Evolving | THM01FTR08 | Architecture Lead (@abalas4) | THM01FTR08 HLD (PI-2) | Initial: flaky-test rerun rate ≤ 5 %; `dev-down` always cleans up |
+  | 4 Security | Evolving | THM01FTR07, THM01FTR09 (THM01STR29, THM01STR36, THM01STR38) | Architecture Lead (@abalas4) | THM01FTR09 HLD (PI-1 iteration 02) | Least privilege per workflow; permissions boundary; no long-lived keys; Access Analyzer + checkov clean; SHA-pinned actions |
   | 5 Compliance & Regulatory | N/A | — | — | — | No regime |
-  | 6 Observability & Monitoring | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | Job summaries, artifacts and reports per run; drift issues; budget alerts |
+  | 6 Observability & Monitoring | Evolving | THM01FTR08, THM01FTR09 (THM01STR37 budget alerts, THM01STR69 alarms) | Architecture Lead (@abalas4) | THM01FTR09 HLD (PI-1 iteration 02) | Job summaries, artifacts and reports per run; drift issues; budget alerts |
   | 7 Usability & Accessibility | N/A | — | — | — | No end-user screens |
-  | 8 Maintainability | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | One script per task shared by CI and local runs; IaC modules reused across environments |
+  | 8 Maintainability | Evolving | THM01FTR07, THM01FTR08 | Architecture Lead (@abalas4) | THM01FTR07 HLD (PI-1 iteration 01) | One script per task shared by CI and local runs; IaC modules reused across environments |
   | 9 Portability & Interoperability | Evolving | — | Architecture Lead (@abalas4) | Step 1.7 | Scripts run in Git Bash / Linux runners; OpenTofu provider pins |
   | 10 Disaster Recovery & BC | Evolving | — | Architecture Lead (@abalas4) | Step 1.7 | State bucket versioned; environments rebuildable from code |
   | 11 Data Quality & Integrity | N/A | — | — | — | No product data |
-  | 12 Capacity, Resource & Cost | Defined | Epic Success Metrics | Product Owner (@abalas4) | Per Device Farm run | GitHub Actions US$0; Device Farm within free minutes; paid runs off by default |
+  | 12 Capacity, Resource & Cost | Defined | Epic Success Metrics; THM01STR37 (budgets), THM01STR69 (alarms) | Product Owner (@abalas4) | Per Device Farm run | GitHub Actions US$0; Device Farm within free minutes; paid runs off by default |
   | 13 AI / ML Fairness | N/A | — | — | — | No AI / ML |
   | 14 Serviceability & Supportability | Evolving | — | Architecture Lead (@abalas4) | Step 6.1 | README setup checklist; workflow runbooks |
-  | 15 Privacy & Data Protection | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | No personal data, account IDs or secrets in logs, artifacts or the repository |
+  | 15 Privacy & Data Protection | Evolving | THM01FTR07 (THM01STR29 secrets scan), THM01FTR09 | Architecture Lead (@abalas4) | THM01FTR09 HLD (PI-1 iteration 02) | No personal data, account IDs or secrets in logs, artifacts or the repository |
   | 16 Localisation & i18n | N/A | — | — | — | Internal tooling |
 
 ALM Status        : Portfolio Backlog

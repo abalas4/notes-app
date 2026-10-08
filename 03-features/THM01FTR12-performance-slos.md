@@ -45,8 +45,7 @@ LLD Reference      : THM01FTR12-LLD
 
 ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ NFR category
-                     · ⚠️ SLOs proposed (plan §12 and plugin mobile defaults) — Product Owner confirms by
-                     approving this PR · ✅ Test strategy · ✅ 3 ACs · ✅ Sized S · ✅ PI Target · ✅ HLD / LLD IDs
+                     · ✅ SLOs confirmed by the Product Owner (PR #3, 2026-10-08) · ✅ Test strategy · ✅ 3 ACs · ✅ Sized S · ✅ PI Target · ✅ HLD / LLD IDs
                      · ✅ Owner · ✅ Child Stories (step 1.3)
 DoD Check          : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

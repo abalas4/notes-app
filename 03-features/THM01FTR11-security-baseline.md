@@ -51,8 +51,8 @@ Constraints        : Public repository (plan §2 rule 7); no Secrets Manager (SS
 Coverage notes     : AC-03 (CVE / secret fails CI) is delivered by THM01STR29 and THM01STR31 (FTR07). The fix-time SLO (Critical 7 days, High 30 days) is owned by operations vulnerability management (step 6.1).
 ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ NFR category
-                     · ⚠️ SLOs proposed from the plan and plugin defaults — Product Owner confirms by approving
-                     this PR · ✅ Test strategy · ✅ 4 ACs · ✅ Sized M · ✅ PI Target · ✅ HLD / LLD IDs · ✅ Owner
+                     · ✅ SLOs confirmed by the Product Owner (PR #3, 2026-10-08)
+                     · ✅ Test strategy · ✅ 4 ACs · ✅ Sized M · ✅ PI Target · ✅ HLD / LLD IDs · ✅ Owner
                      ✅ Child Stories (step 1.3)
 DoD Check          : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

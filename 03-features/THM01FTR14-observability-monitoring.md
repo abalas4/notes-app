@@ -45,7 +45,7 @@ LLD Reference      : THM01FTR14-LLD
 Coverage notes     : "Crash reporting active" is delivered by THM01STR49 (FTR13).
 ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ NFR category
-                     · ⚠️ SLOs proposed — Product Owner confirms by approving this PR · ✅ Test strategy
+                     · ✅ SLOs confirmed by the Product Owner (PR #3, 2026-10-08) · ✅ Test strategy
                      · ✅ 3 ACs · ✅ Sized S · ✅ PI Target · ✅ HLD / LLD IDs · ✅ Owner
                      · ✅ Child Stories (step 1.3)
 DoD Check          : ⚠️ Not started
