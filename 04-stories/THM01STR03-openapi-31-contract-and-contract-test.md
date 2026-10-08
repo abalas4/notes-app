@@ -35,7 +35,7 @@ Acceptance Criteria:
          every response matches its schema
 
 Story Points    : 3
-Sprint Target   : PI-1 iteration 04 (slice 1)
+Sprint Target   : PI-1 iteration 03 (slice 1)
 Release Tag     : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08; confirmed at Sprint Planning)
 Story Type      : New
 Original Story  : N/A

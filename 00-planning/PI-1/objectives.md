@@ -46,6 +46,7 @@ dependants' Time Criticality — 10-pi-planning.md §2).
 |---|---|---|
 | 2026-10-08 | Tech-debt share 5 % in PI-1 (below the 15–20 % default): greenfield codebase with no debt yet; returns to 15 % from PI-2 | Product Owner, Architecture Lead (@abalas4) — RTE and System Architect roles held by the same person |
 | 2026-10-08 | Committed load 22 pts against the new-team baseline; REL-1.0.0 date re-forecast after iteration 03 velocity | Product Owner (@abalas4) |
+| 2026-10-08 | Iteration 01 planning: THM01STR54 pulled into iteration 01 (red string with THM01STR01 AC-03); THM01STR02 → iteration 02, THM01STR03 → iteration 03; iteration 04 holds stretch only. PI total unchanged (22 pts) | Product Owner (@abalas4) |
 
 ## Confidence vote
 

@@ -37,20 +37,20 @@ Delivers        : THM01FTR07 AC-01 (API part) ← AC-01, AC-02, AC-04 · THM01FT
 
 Story Points    : 5
 Sprint Target   : PI-1 iteration 01 (slice 1)
-Release Tag     : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08; confirmed at Sprint Planning)
+Release Tag     : REL-1.0.0 (confirmed at iteration 01 planning 2026-10-08)
 Story Type      : New
 Original Story  : N/A
-Linked WI       : TBD at step 1.7
+Linked WI       : THM01WI09 [HLD], THM01WI10 [DFMEA], THM01WI11 [LLD] (THM01FTR07); THM01WI12 [IMPL], THM01WI13 [TASK], THM01WI14 [TEST]
 Tech Notes      : GitHub Actions ubuntu runners; Docker Buildx; Semgrep; gitleaks; Trivy / Grype; pip-audit; pip-licenses
 Dependencies    : THM01STR01, THM01STR03
 Analytics       : None — no Epic Success Metric is measured from this Story
-ALM Status      : New
+ALM Status      : Ready
 DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature linked
                   ✅ One primary surface tag + Component · ✅ Story Type New / Original N/A
                   ✅ As a / I want / So that · ✅ 5 ACs in Gherkin · ✅ Sized 5 pts · ✅ Analytics line set
                   ✅ Dependencies noted
-                  ✅ Release Tag REL-1.0.0 forecast (PI-1 Planning); confirmed at Sprint Planning
-                  ⚠️ Work Items — identified at step 1.7 (DESIGN / HLD / DFMEA / LLD / IMPL / TEST)
+                  ✅ Release Tag REL-1.0.0 confirmed (iteration 01 planning)
+                  ✅ Work Items identified (05-work-items/, iteration 01 planning 2026-10-08)
 DoD Check       : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

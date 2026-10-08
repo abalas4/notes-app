@@ -33,20 +33,20 @@ Delivers        : THM01FTR06 AC-01 ← AC-01, AC-02 · THM01FTR06 AC-05 (readine
 
 Story Points    : 3
 Sprint Target   : PI-1 iteration 01 (slice 1)
-Release Tag     : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08; confirmed at Sprint Planning)
+Release Tag     : REL-1.0.0 (confirmed at iteration 01 planning 2026-10-08)
 Story Type      : New
 Original Story  : N/A
-Linked WI       : TBD at step 1.7
+Linked WI       : THM01WI01 [HLD], THM01WI02 [DFMEA], THM01WI03 [LLD] (THM01FTR06); THM01WI04 [IMPL], THM01WI05 [TASK], THM01WI06 [TEST]
 Tech Notes      : Python 3.13, FastAPI, Pydantic v2; container for Lambda arm64 + Lambda Web Adapter; docker-compose.yml at 07-source-code-tests/ (folder standard §6)
 Dependencies    : THM01STR29 (API CI gates) runs on its PR; THM01STR54 (error body)
 Analytics       : None — no Epic Success Metric is measured from this Story
-ALM Status      : New
+ALM Status      : Ready
 DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature linked
                   ✅ One primary surface tag + Component · ✅ Story Type New / Original N/A
                   ✅ As a / I want / So that · ✅ 3 ACs in Gherkin · ✅ Sized 3 pts · ✅ Analytics line set
                   ✅ Dependencies noted · ✅ Endpoint contract sketched (final in LLD / OpenAPI)
-                  ✅ Release Tag REL-1.0.0 forecast (PI-1 Planning); confirmed at Sprint Planning
-                  ⚠️ Work Items — identified at step 1.7 (DESIGN / HLD / DFMEA / LLD / IMPL / TEST)
+                  ✅ Release Tag REL-1.0.0 confirmed (iteration 01 planning)
+                  ✅ Work Items identified (05-work-items/, iteration 01 planning 2026-10-08)
 DoD Check       : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
