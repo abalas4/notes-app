@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.3 written on branch `docs/THM01-stories` (72 Stories STR01–72; story review applied; Features/Epic aligned with decisions 1.3-Q) — awaiting PO review/merge via PR. Then 1.4 coverage audit.
+**Current phase:** Step 01 (requirements) · **Next step:** 1.4 coverage audit (safe-alm-req-coverage-auditor, advisory) on branch `docs/THM01-coverage-audit` — record findings only; user will address them later.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -643,7 +643,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 - [x] 0.2 First push to https://github.com/abalas4/notes-app (public; repo created by user 2026-10-08) — done 2026-10-08: pushed; branch protection on `main` (PR required, approvals unticked per D-11, conversation resolution, no bypass, no force-push/deletion; status checks added when CI exists); pre-commit 4.6.2 + gitleaks hook installed and passing
 - [x] 1.1 Strategic Theme + Epic (`/safe-alm-requirements`) — include the R-TX Enabler Feature (§8.1) — **done 2026-10-08 — approved and merged in PR #1 (`d7176c4`)**: THM01, THM01CAP01 (Business), THM01CAP02 (Enabler), THM01EPC01 (Business, Android MVP), THM01EPC02 (Enabler, R-TX/R-AWS). Feature IDs reserved: FTR01–06 (EPC01), FTR07–09 (EPC02)
 - [x] 1.2 Features + NFR Features — **done 2026-10-08 — approved and merged in PR #3 (`a5d0496`); proposed SLOs and WSJF confirmed**: EPC01 → FTR01–06, FTR10 (split), NFR FTR11–14; EPC02 → FTR07–09
-- [~] 1.3 User Stories + ACs (story-reviewer findings resolved) — **written 2026-10-08, awaiting PR approval**: 72 Stories; story-reviewer run on all 14 Features, findings applied; 14 PO decisions (1.3-Q)
+- [x] 1.3 User Stories + ACs (story-reviewer findings resolved) — **done 2026-10-08 — merged in PR #4 (`57231a7`)**: 72 Stories; story-reviewer run on all 14 Features, findings applied; 14 PO decisions (1.3-Q)
 - [ ] 1.4 Coverage audit (coverage-auditor)
 - [ ] 1.5 PI plan, RAID log, PI release roadmap (`/safe-alm-release`) — then **migrate this plan into the standard artefacts and delete `project-plan.md`** (C-01); the tracker continues in `00-planning/PI-1/`
 - [ ] 1.6a Style guide record `06-design/ux/style-guide.md` SG-01…SG-15 built from `../jot-design-source/design.md` — **user approves** (C-03)
@@ -702,6 +702,8 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | 1.3-Q | Story-review business rules (all as recommended except Q12): Q1 sign-out cancels phone reminders · Q2 edit conflict → latest version + own text to clipboard · Q3 no Trash in MVP (→ L-05) · Q4 restore only within Undo (server accepts 30 s) · Q5 "Hide completed" saved with the note · Q6 snooze moves only this occurrence · Q7 offline Mark done → notification stays "Couldn't save — tap to retry" · Q8 reminder due while phone off → fire after boot, marked overdue · Q9 Open on deleted note → Home + "Note not found" · Q10 case-only label rename allowed · Q11 dev-down keeps Cognito dev pool, state bucket, image repo · Q13 sign-out revokes refresh token at Cognito · Q14 "Later today" hidden after 21:00 | User |
 | 2026-10-08 | 1.3-Q12 | **Signed APK only for release hardening.** All other builds (PRs, main, emulator, phone, Device Farm during slices) use the CI debug build with bundled JS; a manual release-hardening workflow signs the APK that goes to phone UAT, Device Farm regression and the GitHub Release (C-08 still met) | User |
 | 2026-10-08 | 1.3 | Settled by Claude (PO did not object): numeric limits → defaults in LLD; Epic 95 % = pivot floor vs 99 % target (note added); Feature metrics sign-ins/week, find ≤ 5 s, labels in use → UAT observation only | Claude |
+| 2026-10-08 | 1.3 | **Approved:** 72 Stories merged (PR #4) | User |
+| 2026-10-08 | 1.4 | Coverage audit: record findings only; fixes deferred to later (user) | User |
 | 2026-10-08 | — | §1.3 deferred-capabilities register (L-01…L-04) added | Claude |
 | 2026-10-08 | — | Mockups (wireframe.html W1–W12 + hi-fi canvas) validated as buildable in React Native; caveats → D-09, D-10 | Claude |
 
