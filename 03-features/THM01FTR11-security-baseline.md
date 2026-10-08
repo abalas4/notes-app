@@ -47,7 +47,7 @@ HLD Reference      : THM01FTR11-HLD
 LLD Reference      : THM01FTR11-LLD
 
 Dependencies       : THM01FTR06, THM01FTR01, THM01FTR07 (CI gates)
-Constraints        : Public repository (plan §2 rule 7); no Secrets Manager (SSM SecureString)
+Constraints        : Public repository (CONTRIBUTING.md, public repository hygiene); no Secrets Manager (SSM SecureString)
 Coverage notes     : AC-03 (CVE / secret fails CI) is delivered by THM01STR29 and THM01STR31 (FTR07). The fix-time SLO (Critical 7 days, High 30 days) is owned by operations vulnerability management (step 6.1).
 ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ NFR category

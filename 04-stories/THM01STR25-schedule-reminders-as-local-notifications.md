@@ -53,7 +53,7 @@ Release Tag     : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08; confirmed at 
 Story Type      : New
 Original Story  : N/A
 Linked WI       : TBD at step 1.7
-Tech Notes      : Local notification library (Notifee provisional — vetting before LLD approval, plan risk R-NOTIF); AlarmManager exact alarms where permitted; boot receiver
+Tech Notes      : Local notification library (Notifee provisional — vetting before LLD approval, RAID-015 R-NOTIF); AlarmManager exact alarms where permitted; boot receiver
 Dependencies    : THM01STR23, THM01STR64, THM01STR24, THM01STR28
 Analytics       : reminder_delivered — when a notification is displayed — {delaySeconds, appVersion} only — owner's own app, no consent prompt (Epic metric: reminder on-time rate; sent by THM01STR53)
 ALM Status      : New

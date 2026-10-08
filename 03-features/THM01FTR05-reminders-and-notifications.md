@@ -52,7 +52,7 @@ LLD Reference     : THM01FTR05-LLD
 
 Dependencies      : THM01FTR02, THM01FTR03 (notes and lists to remind about); THM01FTR06
 Constraints       : Local notifications (D-06); notification library provisional until dependency
-                    vetting before LLD approval (plan risk R-NOTIF); Android 13+ notification permission
+                    vetting before LLD approval (RAID-015, R-NOTIF); Android 13+ notification permission
                     and Android 14+ exact-alarm rules; server push is L-03; UX per W9, W11, W12.
 Platform scope    : As THM01FTR01.
 ALM Status        : Refined (PR #3, 2026-10-08)

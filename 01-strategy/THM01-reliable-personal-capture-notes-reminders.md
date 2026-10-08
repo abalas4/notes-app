@@ -25,7 +25,7 @@ Strategic Metrics:
   - Stability: crash-free users — baseline n/a (new) → ≥ 99.5 %; ANR rate ≤ 0.47 %
   - Running cost: AWS bill for the API — baseline US$0 → ≤ US$1 per month
 Risk / Dependencies: Android 14+ exact-alarm restrictions (reminder reliability); local-notification
-                   library support for the chosen React Native version (plan risk R-NOTIF);
+                   library support for the chosen React Native version (RAID-015, R-NOTIF);
                    online-only MVP may lose edits when the network drops (offline-first deferred, L-01);
                    AWS Device Farm free minutes are one-time (981.77 remaining).
 ALM Status       : Approved (PR #1, 2026-10-08)

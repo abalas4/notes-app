@@ -8,7 +8,7 @@ Tags: [Implementation] [API] [Infra] [Security]
 Parent Epic        : THM01EPC02
 Surfaces           : API (apis/jot-api — infrastructure under 07-source-code-tests/infra/)
 Feature Owner      : Architecture Lead (@abalas4)
-Description        : Requirement R-AWS (plan §8.2). Every AWS resource the API needs is created by OpenTofu
+Description        : Requirement R-AWS (ADR-008). Every AWS resource the API needs is created by OpenTofu
                      through GitHub Actions: the `aws-prereqs` workflow (root `infra/envs/shared`) manages the
                      GitHub OIDC provider, per-workflow IAM roles and the permissions boundary, the state
                      bucket, the image repository, the `/jot/*` SSM parameter paths, the Device Farm project
@@ -56,7 +56,7 @@ LLD Reference      : THM01FTR09-LLD
 Dependencies       : AWS account (legacy free tier); owner runs the bootstrap; GitHub Environments
                      `aws-admin`, `dev`, `prod`, `device-farm` created by the owner
 Constraints        : OpenTofu (D-08); IaC standard IAC-01…IAC-16; no Secrets Manager; no AWS identifiers in the
-                     public repository; Claude never reads the owner's AWS credentials (plan §2 rule 5).
+                     public repository; Claude never reads the owner's AWS credentials (CONTRIBUTING.md, engineering rule 4).
 ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                      · ✅ Description · ✅ Architectural note · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target

@@ -15,7 +15,7 @@ Endpoint Contract: N/A — pipeline / infrastructure Story, no HTTP endpoint
 UX Spec         : N/A — no screens (Feature has no UI; style guide not required)
 
 Business Rules  :
-  BR-01: Roles: jot-gh-plan (read-only), jot-gh-deploy-dev, jot-gh-deploy-prod, jot-gh-devicefarm, jot-gh-release (none — release signing needs no AWS), jot-dev-lambda-exec, jot-prod-lambda-exec (plan §8.2 R-AWS-03)
+  BR-01: Roles: jot-gh-plan (read-only), jot-gh-deploy-dev, jot-gh-deploy-prod, jot-gh-devicefarm, jot-gh-release (none — release signing needs no AWS), jot-dev-lambda-exec, jot-prod-lambda-exec (ADR-008)
   BR-02: Trust: aud sts.amazonaws.com, repository abalas4/notes-app, the Environment, and the workflow file (custom OIDC sub with job_workflow_ref); maximum session 1 h
   BR-03: jot-gh-prereqs may create only jot-* roles that carry jot-boundary and may not change itself or the boundary
   BR-04: No `*` action or resource on any write permission; resources scoped by jot-<env>-* names and tags

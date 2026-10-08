@@ -52,7 +52,7 @@ Constraints       : Cognito Lite tier; Google federation only in production (D-0
                     test users for automated tests; no client secret in the app; tokens only in
                     Keystore-backed storage (MASVS L1).
 Platform scope    : Android, phones, portrait; minimum OS version TBD in the HLD (target ≥ 95 % of
-                    active devices); React Native bare CLI (D-01); device matrix plan §5.3; distribution
+                    active devices); React Native bare CLI (D-01); device matrix ADR-002; distribution
                     by CI-signed APK, no store (C-05).
 ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at 03-features/THM01FTR01-<slug>.md · ✅ Parent Epic linked · ✅ Type tags
