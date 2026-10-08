@@ -625,7 +625,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.3 User Stories on branch `docs/THM01-stories`. Story ID map (fixed): FTR06 STR01–03 · FTR01 STR04–06 · FTR02 STR07–11 · FTR03 STR12–14 · FTR04 STR15–18 · FTR10 STR19–22 · FTR05 STR23–28 · FTR07 STR29–31 · FTR08 STR32–35 · FTR09 STR36–41 · FTR11 STR42–44 · FTR12 STR45–47 · FTR13 STR48–50 · FTR14 STR51–53. Sub-progress: ✅ STR01–31 (EPC01 business/impl + FTR07) · ⏳ STR32–53 · then story-reviewer per Feature. Open: Trash view (FTR04); sign-out keeps reminders? (STR06).
+**Current phase:** Step 01 (requirements) · **Next step:** 1.3 User Stories on branch `docs/THM01-stories`. Story ID map (fixed): FTR06 STR01–03 · FTR01 STR04–06 · FTR02 STR07–11 · FTR03 STR12–14 · FTR04 STR15–18 · FTR10 STR19–22 · FTR05 STR23–28 · FTR07 STR29–31 · FTR08 STR32–35 · FTR09 STR36–41 · FTR11 STR42–44 · FTR12 STR45–47 · FTR13 STR48–50 · FTR14 STR51–53. Sub-progress: ✅ STR01–35 (EPC01 business/impl + FTR07, FTR08) · ⏳ STR36–53 · then story-reviewer per Feature. Open: Trash view (FTR04); sign-out keeps reminders? (STR06).
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
