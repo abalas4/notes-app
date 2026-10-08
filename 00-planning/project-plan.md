@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.4 coverage audit (safe-alm-req-coverage-auditor, advisory) on branch `docs/THM01-coverage-audit` — record findings only; user will address them later.
+**Current phase:** Step 01 (requirements) · **Next step:** 1.4 coverage audit (safe-alm-req-coverage-auditor, advisory) on branch `docs/THM01-coverage-audit` — auditor running; findings will be recorded in `00-planning/raid-log.md` (Issues) and the tracker; fixes deferred by the user.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
