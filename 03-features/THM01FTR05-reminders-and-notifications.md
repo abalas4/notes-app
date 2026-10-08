@@ -30,14 +30,13 @@ Acceptance Criteria:
          the notification is shown within 1 minute with Mark done, Snooze and Open, and the lock screen
          shows no note text unless the owner allowed it in Android settings
   AC-03: Given a reminder notification, When the owner taps "Snooze", Then the app opens the snooze
-         sheet; choosing a preset reschedules the reminder and updates it on the API
-  AC-04: Given a reminder notification, When the owner taps "Mark done", Then the notification is
-         dismissed, the reminder moves to Done on the Reminders tab, and a repeating reminder schedules
-         its next occurrence
-  AC-05: Given Android has not granted notification or exact-alarm permission, When the owner sets the
+         sheet and a chosen preset reschedules the reminder and updates the API; When they tap
+         "Mark done", Then the notification is dismissed, the reminder moves to Done, and a repeating
+         reminder schedules its next occurrence
+  AC-04: Given Android has not granted notification or exact-alarm permission, When the owner sets the
          first reminder, Then the app explains why in context and asks; if denied, the reminder is saved,
          marked "may be late / will not alert", and the Reminders tab shows how to enable it
-  AC-06: Given the app is reinstalled or the phone restarted, When the owner signs in or the phone boots,
+  AC-05: Given the app is reinstalled or the phone restarted, When the owner signs in or the phone boots,
          Then every future reminder from the API is scheduled again on the phone
 
 Sizing            : L
@@ -58,8 +57,7 @@ Constraints       : Local notifications (D-06); notification library provisional
 Platform scope    : As THM01FTR01.
 ALM Status        : New
 DoR Check         : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
-                    · ✅ Description · ✅ Benefit hypothesis · ⚠️ 6 ACs — one over the 2–5 guideline; the
-                    Product Owner may move AC-06 to a Story at step 1.3 · ✅ Sized L · ✅ WSJF · ✅ PI Target
+                    · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs · ✅ Sized L · ✅ WSJF · ✅ PI Target
                     · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner
                     ⚠️ Sprint Target — PI Planning (1.5) · ⚠️ Child Stories — step 1.3
                     ⚠️ Style guide Approved with SG-15 — step 1.6a · ⚠️ Platform scope minimum OS — HLD (1.7)
