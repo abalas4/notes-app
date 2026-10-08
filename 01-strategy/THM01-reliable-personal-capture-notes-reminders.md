@@ -28,12 +28,12 @@ Risk / Dependencies: Android 14+ exact-alarm restrictions (reminder reliability)
                    library support for the chosen React Native version (plan risk R-NOTIF);
                    online-only MVP may lose edits when the network drops (offline-first deferred, L-01);
                    AWS Device Farm free minutes are one-time (981.77 remaining).
-ALM Status       : Proposed
-DoR Check        : ⚠️ Pending — sponsor sign-off (Product Owner approves this file in its pull request)
+ALM Status       : Approved (PR #1, 2026-10-08)
+DoR Check        : ✅ Sponsor sign-off — Product Owner approved and merged PR #1 (2026-10-08)
                    ✅ Stored at 01-strategy/THM01-<slug>.md
                    ✅ Title and vision statement written
                    ✅ Four measurable KPIs / OKRs defined
-                   ⚠️ Business Sponsor identified — commitment recorded on PR approval
+                   ✅ Business Sponsor identified and committed (PR #1)
                    ✅ Time horizon and priority assigned
                    ✅ Value Stream owner confirmed: Product Owner (@abalas4)
                    ✅ No duplication — first Theme in this portfolio

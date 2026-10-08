@@ -139,7 +139,7 @@ Requirement Coverage Assessment — THM01EPC01                         Product S
   | 15 Privacy & Data Protection | Evolving | — | Product Owner (@abalas4) | Step 1.7 (HLD data inventory) | Data minimisation; no personal data in logs, metrics or notifications on the lock screen; delete-account path TBD |
   | 16 Localisation & i18n | N/A | — | Product Owner (@abalas4) | Before any public distribution | Single locale (English); strings still externalised |
 
-ALM Status        : Analysing
+ALM Status        : Portfolio Backlog
 DoR Check         : ✅ Stored at 02-epics/THM01EPC01-<slug>.md
                     ✅ Parent Capability THM01CAP01 linked
                     ✅ Type Business
@@ -159,7 +159,7 @@ DoR Check         : ✅ Stored at 02-epics/THM01EPC01-<slug>.md
                        (Security, Availability & Reliability, Observability, Performance) assessed
                     ✅ ART and PI target set
                     ✅ Epic Owner and Architecture Lead named
-                    ⚠️ Portfolio Kanban approval — recorded when the Product Owner approves the pull request
+                    ✅ Portfolio Kanban approval — Product Owner approved and merged PR #1 (2026-10-08)
 DoD Check         : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

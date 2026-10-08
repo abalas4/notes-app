@@ -127,7 +127,7 @@ Requirement Coverage Assessment — THM01EPC02                         Product S
   | 15 Privacy & Data Protection | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | No personal data, account IDs or secrets in logs, artifacts or the repository |
   | 16 Localisation & i18n | N/A | — | — | — | Internal tooling |
 
-ALM Status        : Analysing
+ALM Status        : Portfolio Backlog
 DoR Check         : ✅ Stored at 02-epics/THM01EPC02-<slug>.md
                     ✅ Parent Capability THM01CAP02 linked
                     ✅ Type Enabler
@@ -146,7 +146,7 @@ DoR Check         : ✅ Stored at 02-epics/THM01EPC02-<slug>.md
                        (Performance not customer-facing)
                     ✅ ART and PI target set
                     ✅ Epic Owner and Architecture Lead named
-                    ⚠️ Portfolio Kanban approval — recorded when the Product Owner approves the pull request
+                    ✅ Portfolio Kanban approval — Product Owner approved and merged PR #1 (2026-10-08)
 DoD Check         : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
