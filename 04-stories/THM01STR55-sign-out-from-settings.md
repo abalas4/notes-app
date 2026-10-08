@@ -1,48 +1,47 @@
-THM01STR06 — Restore session on launch and sign out
+THM01STR55 — Sign out from Settings
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[MOBILE STORY] THM01STR06 — Restore session on launch and sign out
+[MOBILE STORY] THM01STR55 — Sign out from Settings
 Tags: [Mobile] [Android] [Functional] [Security]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Parent Feature  : THM01FTR01
 Component       : mobile/jot
 Persona         : As the owner on Android
-Goal            : I want the app to reopen signed in while my refresh token is valid, and a Sign out action in Settings
-Benefit         : So that I don't sign in every day, and I can end the session when I want
+Goal            : I want a Settings screen with my account and a Sign out action that removes everything of mine from the phone
+Benefit         : So that when I sign out, nothing of mine is left on the phone or usable elsewhere
 
 Platform        : Android <minimum API set in the HLD, step 1.7>+
 Counterpart     : none — iOS is Later (Epic Surfaces; REL-1.1)
 Device classes  : Small phone | Large phone; portrait
-UX Spec         : 06-design/ux/THM01FTR01/ux-spec.md — pending (step 1.6); source screens W7 drawer (Settings entry) — Settings screen is a design gap for UX spec
+UX Spec         : 06-design/ux/THM01FTR01/ux-spec.md — pending (step 1.6); source screens Settings (design gap — UX spec); W7 drawer entry
 Fidelity        : High-fidelity mockup (Jot design canvas) — confirmed against 08-ux-design.md §2 at step 1.6
 Style Guide     : v1.1 incl. SG-15 — pending approval (step 1.6a)
 Usability Check : Proposed "Not required — single-user app; the owner is the Product Owner" (PO decides at 1.6)
 
 Screen / flow:
-  Layout        : Splash while restoring; Settings screen with account row and Sign out
-  Key Elements  : Account row (display name), "Sign out" with confirmation
-  States        : Default | Loading (token refresh) | Error (refresh failed → Sign-in) | Success | Offline | Background / resume
-  Navigation    : Drawer → Settings; sign-out returns to Sign-in with the back stack cleared
+  Layout        : Settings screen: account row, Sign out with confirmation
+  Key Elements  : Account row (display name from the ID token); "Sign out"; confirmation dialog
+  States        : Default | Signing out | Error (revoke failed — local sign-out still completes) | Offline
+  Navigation    : Drawer → Settings; after sign-out the Sign-in screen with the back stack cleared
 Device behaviour:
-  Offline       : Valid access token: app opens and shows the offline banner; expired token and no network: Sign-in screen with offline message
+  Offline       : Sign-out works offline: local tokens and reminders are removed; the refresh-token revoke is skipped and the token simply expires
   Permissions   : None
   Push          : None
   Lifecycle     : Process death or app switch restores the current screen and any unsaved text
-  Data on device: Tokens in Keystore-backed storage; all tokens and in-memory data removed on sign-out
+  Data on device: On sign-out: all tokens deleted, scheduled reminder notifications cancelled (decision Q1), in-memory notes cleared
   Accessibility : TalkBack labels on every control; font scale 200 % reflows; touch targets ≥ 48 dp; reduced motion respected
   Privacy       : None — no data collection change; no store listing (C-05)
 
 Acceptance Criteria:
-  AC-01: Given a stored refresh token that is still valid, When the app is cold-started, Then Home opens
-         without the Sign-in screen
-  AC-02: Given the refresh token is expired or revoked, When the app starts, Then the Sign-in screen is
-         shown and the stored tokens are deleted
-  AC-03: Given the owner is signed in, When they choose Sign out and confirm, Then all tokens are deleted,
-         scheduled reminder notifications are kept (they belong to the phone), and the Sign-in screen opens
-         with no way back
-  AC-04: Given the phone has no network and the access token is still valid, When the app starts, Then Home
-         opens with the offline banner
+  AC-01: Given the owner is signed in, When they choose Sign out and confirm, Then the refresh token is
+         revoked at Cognito, all stored tokens are deleted, all scheduled reminder notifications are
+         cancelled and the Sign-in screen opens
+  AC-02: Given the owner has just signed out, When they press Android Back on the Sign-in screen, Then the
+         app closes without showing Home or any note
+  AC-03: Given the sign-out confirmation, When the owner cancels, Then nothing changes
+  AC-04: Given there is no network, When the owner signs out, Then the local sign-out completes the same
+         way and the app does not wait for the revoke
 
 Story Points    : 3
 Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 1
@@ -50,8 +49,8 @@ Release Tag     : None — forecast at PI Planning (step 1.5) (Android app versi
 Story Type      : New
 Original Story  : N/A
 Linked WI       : TBD at step 1.7
-Tech Notes      : react-native-app-auth refresh; react-native-keychain; navigation reset
-Dependencies    : THM01STR05
+Tech Notes      : Cognito revoke endpoint; react-native-keychain; local-notification cancelAll; navigation reset
+Dependencies    : THM01STR05, THM01STR18 (drawer), THM01STR25 (scheduled reminders)
 Analytics       : None — no Epic Success Metric is measured from this Story
 ALM Status      : New
 DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature linked
@@ -63,7 +62,6 @@ DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature 
                   ⚠️ Release Tag — forecast at PI Planning (1.5), confirmed at Sprint Planning
                   ⚠️ Work Items — identified at step 1.7 (DESIGN / HLD / DFMEA / LLD / IMPL / TEST)
                   ⚠️ Design gap: Settings screen not in W1–W12 — added at UX spec (1.6)
-                  ⚠️ PO to confirm: should sign-out also cancel scheduled reminders? (AC-03 assumes kept)
 DoD Check       : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
