@@ -35,20 +35,20 @@ Acceptance Criteria:
 
 Story Points    : 3
 Sprint Target   : PI-1 iteration 01 (slice 1)
-Release Tag     : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08; confirmed at Sprint Planning)
+Release Tag     : REL-1.0.0 (confirmed at iteration 01 planning 2026-10-08)
 Story Type      : New
 Original Story  : N/A
-Linked WI       : TBD at step 1.7
+Linked WI       : THM01WI03 [LLD] (THM01FTR06, shared with STR01); THM01WI07 [IMPL], THM01WI08 [TEST]
 Tech Notes      : FastAPI exception handlers; structlog; trace ID from the incoming traceparent or generated (W3C); OTel/X-Ray export is THM01STR51
 Dependencies    : THM01STR01
 Analytics       : None — no Epic Success Metric is measured from this Story
-ALM Status      : New
+ALM Status      : Ready
 DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature linked
                   ✅ One primary surface tag + Component · ✅ Story Type New / Original N/A
                   ✅ As a / I want / So that · ✅ 4 ACs in Gherkin · ✅ Sized 3 pts · ✅ Analytics line set
                   ✅ Dependencies noted · ✅ Endpoint contract sketched (final in LLD / OpenAPI)
-                  ✅ Release Tag REL-1.0.0 forecast (PI-1 Planning); confirmed at Sprint Planning
-                  ⚠️ Work Items — identified at step 1.7 (DESIGN / HLD / DFMEA / LLD / IMPL / TEST)
+                  ✅ Release Tag REL-1.0.0 confirmed (iteration 01 planning)
+                  ✅ Work Items identified (05-work-items/, iteration 01 planning 2026-10-08)
 DoD Check       : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
