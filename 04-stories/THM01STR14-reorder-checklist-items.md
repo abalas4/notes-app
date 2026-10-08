@@ -1,27 +1,27 @@
-THM01STR14 — Reorder items, list actions and convert
+THM01STR14 — Reorder checklist items
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[MOBILE STORY] THM01STR14 — Reorder items, list actions and convert
+[MOBILE STORY] THM01STR14 — Reorder checklist items
 Tags: [Mobile] [Android] [Functional]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Parent Feature  : THM01FTR03
 Component       : mobile/jot
 Persona         : As the owner on Android
-Goal            : I want to drag items into a new order, hide completed, uncheck all, delete completed, and convert between list and text
-Benefit         : So that lists stay tidy and I can turn a note into a list (and back) when it suits
+Goal            : I want to drag items into a new order
+Benefit         : So that my list is in the order I shop or work
 
 Platform        : Android <minimum API set in the HLD, step 1.7>+
 Counterpart     : none — iOS is Later (Epic Surfaces; REL-1.1)
 Device classes  : Small phone | Large phone; portrait
-UX Spec         : 06-design/ux/THM01FTR03/ux-spec.md — pending (step 1.6); source screens W5 List, W10 List states
+UX Spec         : 06-design/ux/THM01FTR03/ux-spec.md — pending (step 1.6); source screens W5 List
 Fidelity        : High-fidelity mockup (Jot design canvas) — confirmed against 08-ux-design.md §2 at step 1.6
 Style Guide     : v1.1 incl. SG-15 — pending approval (step 1.6a)
 Usability Check : Proposed "Not required — single-user app; the owner is the Product Owner" (PO decides at 1.6)
 
 Screen / flow:
-  Layout        : Drag handles on items; list "more" menu with Hide completed / Uncheck all / Delete completed / Convert
-  Key Elements  : Drag handle; more menu; confirmation dialog for Delete completed and for list → text
+  Layout        : Drag handle on each unchecked item
+  Key Elements  : Drag handle
   States        : Default | Dragging | Saving | Error (Retry) | Offline
   Navigation    : Within the list editor
 Device behaviour:
@@ -36,24 +36,24 @@ Device behaviour:
 Acceptance Criteria:
   AC-01: Given a list, When the owner drags item 3 above item 1, Then the new order is saved and is the
          same after reopening the app
-  AC-02: Given completed items, When the owner chooses Hide completed, Uncheck all or Delete completed
-         (confirmed), Then exactly that action is applied and saved
-  AC-03: Given a list with checked items, When the owner converts it to a text note and confirms that
-         checked state will be dropped, Then the editor switches to a text note with one line per item
+  AC-02: Given the save fails or there is no network, When the owner drops an item, Then the list returns
+         to the last saved order and an error / offline message with Retry is shown
+  AC-03: Given TalkBack is on, When a drag handle is focused, Then it offers "Move up" and "Move down"
+         actions that reorder the item
 
-Story Points    : 5
+Story Points    : 3
 Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 3
 Release Tag     : None — forecast at PI Planning (step 1.5) (Android app version / build set at release; min supported app version per HLD)
 Story Type      : New
 Original Story  : N/A
 Linked WI       : TBD at step 1.7
-Tech Notes      : react-native-draggable-flatlist; Reanimated; Gesture Handler
+Tech Notes      : react-native-draggable-flatlist; Reanimated; Gesture Handler; accessibility actions
 Dependencies    : THM01STR12, THM01STR13
 Analytics       : None — no Epic Success Metric is measured from this Story
 ALM Status      : New
 DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature linked
                   ✅ One primary surface tag + Component · ✅ Story Type New / Original N/A
-                  ✅ As a / I want / So that · ✅ 3 ACs in Gherkin · ✅ Sized 5 pts · ✅ Analytics line set
+                  ✅ As a / I want / So that · ✅ 3 ACs in Gherkin · ✅ Sized 3 pts · ✅ Analytics line set
                   ✅ Dependencies noted
                   ⚠️ UX Spec Approved for Android — step 1.6 (needs style guide Approved, step 1.6a)
                   ⚠️ Platform minimum Android version — HLD (step 1.7)

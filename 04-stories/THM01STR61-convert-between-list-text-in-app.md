@@ -1,29 +1,29 @@
-THM01STR13 — Checklist editor with progress
+THM01STR61 — Convert between list and text in the app
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[MOBILE STORY] THM01STR13 — Checklist editor with progress
+[MOBILE STORY] THM01STR61 — Convert between list and text in the app
 Tags: [Mobile] [Android] [Functional]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Parent Feature  : THM01FTR03
 Component       : mobile/jot
 Persona         : As the owner on Android
-Goal            : I want to add, edit, check, uncheck and delete items and see completed items move to a Completed group with "N of M done"
-Benefit         : So that I can tick off shopping and task lists quickly
+Goal            : I want to convert a checklist to a text note and back from the editor
+Benefit         : So that I can change a note's form when it suits
 
 Platform        : Android <minimum API set in the HLD, step 1.7>+
 Counterpart     : none — iOS is Later (Epic Surfaces; REL-1.1)
 Device classes  : Small phone | Large phone; portrait
-UX Spec         : 06-design/ux/THM01FTR03/ux-spec.md — pending (step 1.6); source screens W5 List, W10 List states
+UX Spec         : 06-design/ux/THM01FTR03/ux-spec.md — pending (step 1.6); source screens W4 Note, W5 List
 Fidelity        : High-fidelity mockup (Jot design canvas) — confirmed against 08-ux-design.md §2 at step 1.6
 Style Guide     : v1.1 incl. SG-15 — pending approval (step 1.6a)
 Usability Check : Proposed "Not required — single-user app; the owner is the Product Owner" (PO decides at 1.6)
 
 Screen / flow:
-  Layout        : Title; unchecked items with drag handles; "+ List item"; collapsible "Completed · N" group; progress text
-  Key Elements  : Checkbox per item; item text field; delete item ✕; progress "N of M done"
-  States        : Default | Empty list | Saving | Error (Retry) | Offline | Conflict (latest version reloaded) | Background / resume
-  Navigation    : FAB menu "New list"; card tap on a list note
+  Layout        : Editor "more" menu entry; confirmation dialog for list → text
+  Key Elements  : Convert to text / Convert to list; confirmation
+  States        : Default | Converting | Error (Retry) | Offline
+  Navigation    : Editor "more" menu
 Device behaviour:
   Offline       : Online-only (D-07): offline banner; actions that need the API are disabled or fail visibly with Retry; nothing is shown as saved until the API confirms
   Permissions   : None
@@ -34,31 +34,27 @@ Device behaviour:
   Privacy       : None — no data collection change; no store listing (C-05)
 
 Acceptance Criteria:
-  AC-01: Given a list note, When the owner adds three items and checks one, Then it moves to Completed with
-         strike-through and the header reads "1 of 3 done"
-  AC-02: Given a checked item, When it is unchecked, Then it returns to its earlier position among
-         unchecked items
-  AC-03: Given an item, When the owner edits its text or taps ✕, Then the change is saved and the progress
-         updates
-  AC-04: Given a new list with no items, When the editor opens, Then only "+ List item" is shown and no
-         progress text
-  AC-05: Given the API returns an error, 409 or there is no network, When the owner checks an item, Then
-         the app shows the error / offline message with Retry, the item is not shown as saved, and for 409
-         Retry reloads the latest list first
+  AC-01: Given a list with checked items, When the owner chooses Convert to text and confirms that checked
+         state will be dropped, Then the editor shows a text note with one line per item; When they cancel,
+         nothing changes
+  AC-02: Given a text note with 3 non-empty lines and 1 blank line, When the owner chooses Convert to list,
+         Then the editor shows 3 unchecked items in the original order
+  AC-03: Given the convert call fails or there is no network, When the owner converts, Then the note keeps
+         its form and an error / offline message with Retry is shown
 
-Story Points    : 5
+Story Points    : 2
 Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 3
 Release Tag     : None — forecast at PI Planning (step 1.5) (Android app version / build set at release; min supported app version per HLD)
 Story Type      : New
 Original Story  : N/A
 Linked WI       : TBD at step 1.7
-Tech Notes      : Shared editor shell with THM01STR10; UI shows saved state only after the API confirms (D-07)
-Dependencies    : THM01STR12, THM01STR10
+Tech Notes      : POST /convert (THM01STR59)
+Dependencies    : THM01STR59, THM01STR10, THM01STR13
 Analytics       : None — no Epic Success Metric is measured from this Story
 ALM Status      : New
 DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature linked
                   ✅ One primary surface tag + Component · ✅ Story Type New / Original N/A
-                  ✅ As a / I want / So that · ✅ 5 ACs in Gherkin · ✅ Sized 5 pts · ✅ Analytics line set
+                  ✅ As a / I want / So that · ✅ 3 ACs in Gherkin · ✅ Sized 2 pts · ✅ Analytics line set
                   ✅ Dependencies noted
                   ⚠️ UX Spec Approved for Android — step 1.6 (needs style guide Approved, step 1.6a)
                   ⚠️ Platform minimum Android version — HLD (step 1.7)

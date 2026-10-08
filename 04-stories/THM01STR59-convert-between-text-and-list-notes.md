@@ -1,50 +1,47 @@
-THM01STR12 — Checklist items on notes
+THM01STR59 — Convert between text and list notes
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[API STORY] THM01STR12 — Checklist items on notes
+[API STORY] THM01STR59 — Convert between text and list notes
 Tags: [API] [Functional]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Parent Feature  : THM01FTR03
 Component       : apis/jot-api
 Persona         : As the owner (through the Jot app)
-Goal            : I want list notes whose items I can add, edit, check, reorder and remove, with a saved "hide completed" setting
-Benefit         : So that my checklists are stored with the same versioning and ownership rules as notes
+Goal            : I want to convert a list note to a text note and a text note to a list note
+Benefit         : So that I can change a note's form without retyping it
 
 Endpoint Contract:
-  Method        : POST · PATCH
-  Path          : /api/v1/notes (type "list") · /api/v1/notes/{id}
+  Method        : POST
+  Path          : /api/v1/notes/{id}/convert
   Auth          : Bearer JWT (Cognito access token)
-  Request Body  : {version, items:[{id, text≤1000, checked, position}] (≤ 500 items), hideCompleted?}
-  Response 2xx  : 201 / 200 note with items, hideCompleted and progress {done, total}
+  Request Body  : {version, to:"text"|"list"}
+  Response 2xx  : 200 note in the new type
   Response 4xx  : 400 VALIDATION_ERROR · 409 VERSION_CONFLICT — {error:{code,message,traceId}}
   Response 5xx  : 503 SERVICE_UNAVAILABLE / 500 INTERNAL — {error:{code,message,traceId}}
   Shared checks : 401 for a missing / invalid token and 404 for another user's item are verified on every route by THM01STR42
 
 Acceptance Criteria:
-  AC-01: Given a list note with 3 items, When PATCH checks item 2, Then 200 with item 2 checked and
-         progress {done:1, total:3}
-  AC-02: Given a list note, When PATCH sends a new item order, Then positions are stored and returned in
-         that order
-  AC-03: Given a list note, When PATCH sets hideCompleted true, Then it is stored and returned on every
-         later read (decision Q5)
-  AC-04: Given 501 items or an item over 1,000 characters, When saved, Then 400 VALIDATION_ERROR naming the
-         field and nothing changes
-  AC-05: Given a stale version, When PATCH is sent, Then 409 VERSION_CONFLICT and the list is unchanged
+  AC-01: Given a list note with items A, B (checked), C, When POST /convert to "text", Then the body is the
+         three lines "A", "B", "C" in order, items and checked state are removed, and type is "text"
+  AC-02: Given a text note with 3 non-empty lines and 1 blank line, When POST /convert to "list", Then it
+         has 3 unchecked items in the original order and an empty body
+  AC-03: Given a stale version, When POST /convert is sent, Then 409 VERSION_CONFLICT and the note is
+         unchanged
 
-Story Points    : 5
+Story Points    : 2
 Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 3
 Release Tag     : None — forecast at PI Planning (step 1.5)
 Story Type      : New
 Original Story  : N/A
 Linked WI       : TBD at step 1.7
-Tech Notes      : Items stored inside the note item (size checked against the 400 KB DynamoDB item limit in the LLD)
-Dependencies    : THM01STR07, THM01STR08
-Analytics       : note_created with {type:"list"} is emitted by THM01STR07 for new lists — no extra event
+Tech Notes      : Same note item; conversion in the service
+Dependencies    : THM01STR12
+Analytics       : None — no Epic Success Metric is measured from this Story
 ALM Status      : New
 DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature linked
                   ✅ One primary surface tag + Component · ✅ Story Type New / Original N/A
-                  ✅ As a / I want / So that · ✅ 5 ACs in Gherkin · ✅ Sized 5 pts · ✅ Analytics line set
+                  ✅ As a / I want / So that · ✅ 3 ACs in Gherkin · ✅ Sized 2 pts · ✅ Analytics line set
                   ✅ Dependencies noted · ✅ Endpoint contract sketched (final in LLD / OpenAPI)
                   ⚠️ Release Tag — forecast at PI Planning (1.5), confirmed at Sprint Planning
                   ⚠️ Work Items — identified at step 1.7 (DESIGN / HLD / DFMEA / LLD / IMPL / TEST)
