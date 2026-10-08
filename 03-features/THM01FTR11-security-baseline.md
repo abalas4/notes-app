@@ -38,8 +38,8 @@ Acceptance Criteria:
   AC-04: Given the ZAP baseline scan against `dev`, When it completes, Then there are 0 High alerts
 
 Sizing             : M
-PI Target          : PI-1
-Release Tag        : None — forecast at PI Planning (step 1.5)
+PI Target          : PI-2+ (forecast after iteration 03 velocity)
+Release Tag        : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08)
 Feature Type       : New
 Original Feature   : N/A
 Linked Stories     : THM01STR42 [API], THM01STR43 [Mobile] [Android], THM01STR44 [API] (step 1.3, after story review)

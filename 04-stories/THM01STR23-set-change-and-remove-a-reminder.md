@@ -32,8 +32,8 @@ Acceptance Criteria:
   AC-05: Given a stale version, When PUT is called, Then 409 VERSION_CONFLICT and the reminder is unchanged
 
 Story Points    : 3
-Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 5
-Release Tag     : None — forecast at PI Planning (step 1.5)
+Sprint Target   : PI-2+ — forecast after iteration 03 velocity (slice 5)
+Release Tag     : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08; confirmed at Sprint Planning)
 Story Type      : New
 Original Story  : N/A
 Linked WI       : TBD at step 1.7
@@ -45,7 +45,7 @@ DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature 
                   ✅ One primary surface tag + Component · ✅ Story Type New / Original N/A
                   ✅ As a / I want / So that · ✅ 5 ACs in Gherkin · ✅ Sized 3 pts · ✅ Analytics line set
                   ✅ Dependencies noted · ✅ Endpoint contract sketched (final in LLD / OpenAPI)
-                  ⚠️ Release Tag — forecast at PI Planning (1.5), confirmed at Sprint Planning
+                  ✅ Release Tag REL-1.0.0 forecast (PI-1 Planning); confirmed at Sprint Planning
                   ⚠️ Work Items — identified at step 1.7 (DESIGN / HLD / DFMEA / LLD / IMPL / TEST)
 DoD Check       : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

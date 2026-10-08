@@ -44,9 +44,9 @@ Acceptance Criteria:
 
 Sizing             : M
 WSJF               : (5 + 10 + 10) / 5 = 5.0   (proposed; blocks every deployment)
-PI Target          : PI-1
-Sprint Target      : TBD at PI Planning (step 1.5) — planned slice 1
-Release Tag        : None — forecast at PI Planning (step 1.5)
+PI Target          : PI-1 (started) → PI-2
+Sprint Target      : PI-1 iteration 02 (STR36); STR37, STR40 stretch; rest PI-2+ (was: planned slice 1)
+Release Tag        : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08)
 Feature Type       : New
 Original Feature   : N/A
 Linked Stories     : THM01STR36 [API], THM01STR37 [API], THM01STR38 [API], THM01STR39 [API], THM01STR40 [API], THM01STR41 [API], THM01STR69 [API], THM01STR70 [API] (step 1.3, after story review)
@@ -61,7 +61,7 @@ ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                      · ✅ Description · ✅ Architectural note · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                      · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner
-                     ⚠️ Sprint Target — PI Planning (1.5) · ✅ Child Stories (step 1.3)
+                     ✅ Sprint Target set at PI-1 Planning · ✅ Child Stories (step 1.3)
                      N/A Style guide — no screens in this Feature
 DoD Check          : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
