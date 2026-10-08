@@ -13,13 +13,16 @@ Goal            : I want the API to respond fast at ten times my normal load
 Benefit         : So that the app never waits on the server
 
 SLO/Threshold   :
-  - p95 < 300 ms (warm) at 5 requests per second for 10 minutes
+  - Warm p95 < 300 ms at 5 requests per second for 10 minutes over a dataset of 500 notes (cold starts excluded and reported separately)
   - Error rate < 1 % during the test
-Test Approach   : k6 scenario (list, create, update notes) against dev; baseline JSON committed in tests/apis/jot-api/load/
+Test Approach   : k6 scenario (list, create, update notes) against pre-warmed dev; baseline JSON committed in tests/apis/jot-api/load/
 
 Acceptance Criteria:
-  AC-01: Given dev at 5 rps for 10 minutes, When the k6 test runs, Then p95 < 300 ms and errors < 1 %
-  AC-02: Given a new baseline, When a later run is 20 % slower at p95, Then the performance check fails
+  AC-01: Given dev is pre-warmed and holds 500 notes, When the k6 scenario (list, create, update) runs at 5
+         rps for 10 minutes, Then warm p95 is below 300 ms and errors below 1 %, with cold-start requests
+         reported separately
+  AC-02: Given the committed baseline JSON, When a later run's p95 is more than 20 % above it, Then the CI
+         performance check fails
 
 Story Points    : 3
 Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 2
@@ -28,7 +31,7 @@ Story Type      : New
 Original Story  : N/A
 Linked WI       : TBD at step 1.7
 Tech Notes      : k6 in Docker; load/<scenario>_test.js and load/<scenario>-baseline.json (folder standard §5)
-Dependencies    : THM01STR07, THM01STR35
+Dependencies    : THM01STR07, THM01STR08, THM01STR56, THM01STR35
 Analytics       : None — no Epic Success Metric is measured from this Story
 ALM Status      : New
 DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature linked

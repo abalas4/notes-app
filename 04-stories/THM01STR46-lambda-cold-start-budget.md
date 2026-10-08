@@ -9,17 +9,18 @@ Parent Feature  : THM01FTR12
 Component       : apis/jot-api
 NFR Category    : Performance
 Persona         : As the owner opening the app after a while
-Goal            : I want the first API call after the function was idle to finish in under a second
+Goal            : I want the first API call after the function was idle to finish in under a second on the server side
 Benefit         : So that the app feels instant even when it has not been used for hours
 
 SLO/Threshold   :
-  - Cold start request < 1 s end to end (p95 over 20 cold starts)
-  - Image size ≤ 200 MB (slim, arm64)
-Test Approach   : Script forcing cold starts (config change) and reading X-Ray init + duration; image size check in CI
+  - Server-side cold-start request (Lambda init + duration, from X-Ray) < 1 s at p95 over 20 forced cold starts
+  - Image size ≤ 200 MB (slim, arm64) — guard rail
+Test Approach   : Script forcing cold starts (configuration change) and reading X-Ray init + duration; image size check in CI
 
 Acceptance Criteria:
-  AC-01: Given 20 forced cold starts in dev, When their durations are read from X-Ray, Then p95 < 1 s
-  AC-02: Given the API image, When it is built in CI, Then its size is ≤ 200 MB
+  AC-01: Given 20 forced cold starts in dev, When their server-side durations are read from X-Ray, Then p95
+         is below 1 s
+  AC-02: Given the API image, When it is built in CI, Then its size is at most 200 MB
 
 Story Points    : 3
 Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 2
