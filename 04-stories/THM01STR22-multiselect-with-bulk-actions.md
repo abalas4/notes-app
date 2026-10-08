@@ -1,29 +1,29 @@
-THM01STR16 — Label picker with create on the fly
+THM01STR22 — Multi-select with bulk actions
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[MOBILE STORY] THM01STR16 — Label picker with create on the fly
+[MOBILE STORY] THM01STR22 — Multi-select with bulk actions
 Tags: [Mobile] [Android] [Functional]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Parent Feature  : THM01FTR04
+Parent Feature  : THM01FTR10
 Component       : mobile/jot
 Persona         : As the owner on Android
-Goal            : I want to tick labels for a note in a picker and create a new label by typing its name
-Benefit         : So that I can label a note without leaving the editor
+Goal            : I want to long-press notes to select several and pin, label, recolour, archive or delete them together
+Benefit         : So that tidying many notes takes one action instead of many
 
 Platform        : Android <minimum API set in the HLD, step 1.7>+
 Counterpart     : none — iOS is Later (Epic Surfaces; REL-1.1)
 Device classes  : Small phone | Large phone; portrait
-UX Spec         : 06-design/ux/THM01FTR04/ux-spec.md — pending (step 1.6); source screens W6 Label picker
+UX Spec         : 06-design/ux/THM01FTR10/ux-spec.md — pending (step 1.6); source screens W3 Select and organize
 Fidelity        : High-fidelity mockup (Jot design canvas) — confirmed against 08-ux-design.md §2 at step 1.6
 Style Guide     : v1.1 incl. SG-15 — pending approval (step 1.6a)
 Usability Check : Proposed "Not required — single-user app; the owner is the Product Owner" (PO decides at 1.6)
 
 Screen / flow:
-  Layout        : Bottom sheet: search / name field; list of labels with checkboxes and counts; "+ Create \"<name>\"" row; Done
-  Key Elements  : Name field; label rows with checkbox and count; Create row; Done
-  States        : Default | Filtering | Empty (no labels yet) | Saving | Error (inline, e.g. name exists) | Offline
-  Navigation    : Editor bottom bar # button; Done closes the sheet
+  Layout        : Selection app bar (✕, "N selected", pin, label, more); selected cards outlined with a check
+  Key Elements  : Selection bar; bulk actions sheet: Pin / unpin, Add or change labels, Change colour, Archive, Delete
+  States        : Default | Selecting | Applying | Partial failure ("2 of 3 updated · Retry") | Offline
+  Navigation    : Long-press a card enters selection; ✕ or back exits
 Device behaviour:
   Offline       : Online-only (D-07): offline banner; actions that need the API are disabled or fail visibly with Retry; nothing is shown as saved until the API confirms
   Permissions   : None
@@ -34,26 +34,26 @@ Device behaviour:
   Privacy       : None — no data collection change; no store listing (C-05)
 
 Acceptance Criteria:
-  AC-01: Given the picker is open, When the owner types "Trip" that does not exist and taps Create, Then
-         the label is created, ticked for this note and shown as a chip after Done
-  AC-02: Given existing labels, When the owner ticks two and unticks one and taps Done, Then the note's
-         labels are saved exactly as ticked
-  AC-03: Given the typed name matches an existing label ignoring case, When the list filters, Then no
-         Create row is offered and the existing label is shown
+  AC-01: Given Home, When the owner long-presses a note and taps two more, Then the bar shows "3 selected"
+  AC-02: Given 3 selected notes, When the owner chooses Archive, Then all 3 leave Home and selection ends
+  AC-03: Given 3 selected notes, When the owner deletes them, Then a snackbar offers Undo for 5 s that
+         restores all 3
+  AC-04: Given one note fails in the batch, When the result returns, Then the bar reports the partial
+         result with Retry for the failed note
 
-Story Points    : 3
+Story Points    : 5
 Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 4
 Release Tag     : None — forecast at PI Planning (step 1.5) (Android app version / build set at release; min supported app version per HLD)
 Story Type      : New
 Original Story  : N/A
 Linked WI       : TBD at step 1.7
-Tech Notes      : @gorhom/bottom-sheet; API THM01STR15
-Dependencies    : THM01STR15, THM01STR10
+Tech Notes      : Selection state in Zustand; API THM01STR20
+Dependencies    : THM01STR20, THM01STR09, THM01STR16
 Analytics       : None — no Epic Success Metric is measured from this Story
 ALM Status      : New
 DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature linked
                   ✅ One primary surface tag + Component · ✅ Story Type New / Original N/A
-                  ✅ As a / I want / So that · ✅ 3 ACs in Gherkin · ✅ Sized 3 pts · ✅ Analytics line set
+                  ✅ As a / I want / So that · ✅ 4 ACs in Gherkin · ✅ Sized 5 pts · ✅ Analytics line set
                   ✅ Dependencies noted
                   ⚠️ UX Spec Approved for Android — step 1.6 (needs style guide Approved, step 1.6a)
                   ⚠️ Platform minimum Android version — HLD (step 1.7)
