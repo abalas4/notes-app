@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, migrate this plan into standard artefacts (C-01). Branch `docs/THM01-pi-planning`.
+**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). 1.6a style guide Approved v1.0 on branch `docs/THM01-style-guide` (awaiting PR).
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -645,8 +645,8 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 - [x] 1.2 Features + NFR Features — **done 2026-10-08 — approved and merged in PR #3 (`a5d0496`); proposed SLOs and WSJF confirmed**: EPC01 → FTR01–06, FTR10 (split), NFR FTR11–14; EPC02 → FTR07–09
 - [x] 1.3 User Stories + ACs (story-reviewer findings resolved) — **done 2026-10-08 — merged in PR #4 (`57231a7`)**: 72 Stories; story-reviewer run on all 14 Features, findings applied; 14 PO decisions (1.3-Q)
 - [x] 1.4 Coverage audit (coverage-auditor) — **done 2026-10-08**: verdict ATTENTION NEEDED (advisory); stage expectation met for both Epics; 0 broken links; 5 gaps recorded as RAID-001…005 (+ RAID-006 HLD assumptions) in `00-planning/raid-log.md`; fixes deferred by the user
+- [x] 1.6a Style guide record `06-design/ux/style-guide.md` SG-01…SG-15 — **done 2026-10-08: Approved v1.0** (UX Lead, PO, Tech Lead); P-01…P-07 accepted; SG-13/SG-14 N/A. Moved before 1.5: Feature DoR for [Mobile] Features requires it (`06-alm-rules.md`)
 - [ ] 1.5 PI plan, RAID log, PI release roadmap (`/safe-alm-release`) — then **migrate this plan into the standard artefacts and delete `project-plan.md`** (C-01); the tracker continues in `00-planning/PI-1/`
-- [ ] 1.6a Style guide record `06-design/ux/style-guide.md` SG-01…SG-15 built from `../jot-design-source/design.md` — **user approves** (C-03)
 - [ ] 1.6 UX spec per Feature mapped to W1–W12 (+ empty / error states)
 - [ ] 1.7 HLD, DFMEA, LLD per Feature + ADRs + OpenAPI 3.1 — **includes R-NOTIF: vet Notifee (or pick fallback) before LLD approval**
 - [ ] 1.8 Design review (design-reviewer) — gaps closed
@@ -708,6 +708,8 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | 1.4 | **Merged:** coverage audit findings + RAID log (PR #5) | User |
 | 2026-10-08 | — | §1.3 deferred-capabilities register (L-01…L-04) added | Claude |
 | 2026-10-08 | — | Mockups (wireframe.html W1–W12 + hi-fi canvas) validated as buildable in React Native; caveats → D-09, D-10 | Claude |
+| 2026-10-08 | 1.6a | **Order fixed: 1.6a style guide before 1.5 PI planning.** Feature DoR for [Mobile] Features needs the Approved style guide (+ SG-15); HLD/DFMEA/LLD stay as PI-1 Work Items (Feature DoR needs only their IDs). Conformance fix, not a deviation | User |
+| 2026-10-08 | 1.6a | **Style guide v1.0 Approved** with P-01 outline-strong `#857F76` for control boundaries · P-02 no Teal text on note colours · P-03 Ink-soft unchecked checkbox border · P-04 portrait only in MVP · P-05 empty / loading / error / offline patterns from Story copy · P-06 motion 150/250/300 ms, honour Remove animations · P-07 adaptive app icon + plain splash (artwork = `[DESIGN]` WI in slice 1) | User |
 
 ### Session log
 | Date | Session summary |
@@ -721,3 +723,4 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 (session 3, cont.) | 1.2 merged (PR #3). 1.3: 53 Stories written, 14 story reviews run, 14 PO decisions recorded (Q12 changed: signed builds only for release hardening), review fixes applied → 72 Stories; Features/Epic aligned. Tools + review notes in workspace story-review-1.3/. Awaiting PR. |
 | 2026-10-08 (session 3, cont.) | 1.3 merged (PR #4). 1.4 coverage audit run: ATTENTION NEEDED (advisory), 5 gaps → RAID-001…005, RAID-006 assumptions; raid-log.md created; full report in workspace audits/. |
 | 2026-10-08 (session 3, end) | 1.4 merged (PR #5). User paused the session. Resume at 1.5 on local branch `docs/THM01-pi-planning` (this tracker update is committed there, not yet pushed). |
+| 2026-10-08 (session 4) | Explained PI planning vs design order (design = PI Work Items; Feature DoR needs only HLD/LLD IDs) and PI planning vs IP iteration. Reordered 1.6a before 1.5. Wrote style guide from the design source with a computed contrast table; user accepted P-01…P-07 and approved v1.0. Next: PR for 1.6a, then 1.5. |
