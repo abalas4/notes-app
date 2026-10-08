@@ -35,3 +35,15 @@ Leave not yet known: each day of leave reduces that iteration by 1 pt; the itera
   codebase); it returns to 15 % from PI-2.
 - **Velocity switch:** after iteration 03 the plan uses the median velocity of iterations 01–03 and
   the PI release roadmap is re-forecast (`10-release/PI-1-release-roadmap.md`).
+
+## Estimates are indicative (Product Owner, 2026-10-08)
+
+The developer is an AI agent, so real velocity is expected to beat the 8-pt baseline by a wide margin.
+The points and iteration loads above are indicative only. How this is handled without breaking the
+plan's rules:
+- **Iterations keep their 2-week time box.** When the committed Stories are Done early, the next
+  Stories that pass Story DoR are pulled in: stretch objectives first, then the PI-2+ backlog in
+  dependency and WSJF order. Each pull is recorded in the iteration plan, with its Release Tag confirmed.
+- **Velocity is measured, not assumed.** Pulled-in Stories count toward the iteration's velocity.
+- **Re-forecast early.** If iteration 01 velocity is well above the baseline, the PI release roadmap
+  and the REL-1.0.0 date are re-forecast at the iteration 01 review instead of waiting for iteration 03.

@@ -13,7 +13,7 @@ Updated: 2026-10-08
   matrix (plan 4.y); there is no app store, so a faster train adds no user value before the MVP.
   Revisit at Inspect & Adapt once the MVP is live.
 - **Why no PI-1 release:** at the new-team baseline (8 pts per iteration) PI-1 delivers 22 of 241
-  points. The REL-1.0.0 date is set from real velocity after iteration 03 (ROAM R-01).
+  points. The REL-1.0.0 date is set from real velocity (ROAM R-01). Estimates are indicative: the developer is an AI agent and velocity is expected to beat the baseline, so the date is re-forecast at the iteration 01 review if velocity is well above baseline, at the latest at iteration 03.
 - Hotfix and Out-of-band releases are added here when raised.
 
 Changes since last update: — (first version)

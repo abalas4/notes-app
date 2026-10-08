@@ -715,6 +715,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | 1.5 | **PI-1 capacity allocation:** Business 55 % · Enablers 25 % · tech debt/upgrades/reliability 5 % (below the 15–20 % default: greenfield, no debt yet — agreement recorded in `objectives.md`; back to 15 % from PI-2) · defects 0 % · buffer 15 % | User |
 | 2026-10-08 | 1.5 | PI-1 committed 22 pts: THM01FTR06 (STR01, STR54, STR02, STR03) + STR29 + STR36; stretch STR37, STR40, STR04, STR30. Objectives 1–3 committed (BV 8 / 7 / 5), 4–5 uncommitted (BV 6 / 5). Cadence **PI train**; REL-1.0.0 Draft, all 72 Stories forecast, date TBD after iteration 03 velocity. RAID-001/002/003/005 resolved | Claude (PO confirms in PR) |
 | 2026-10-08 | 1.5 | RAID-004: Stories get a `Delivers` line (Feature AC ← Story AC) at the iteration planning where they enter; C-01 plan migration in a separate PR after the PI-1 plan PR | User |
+| 2026-10-08 | 1.5 | **Sprint estimates are indicative** — AI is the developer, so iterations may finish sooner. Iterations keep the 2-week time box; finished early → pull the next DoR-ready Stories (stretch first, then PI-2+ by dependency / WSJF), recorded in the iteration plan; re-forecast REL-1.0.0 at the iteration 01 review if velocity is well above baseline | User |
 
 ### Session log
 | Date | Session summary |
