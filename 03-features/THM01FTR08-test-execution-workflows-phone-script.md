@@ -47,7 +47,7 @@ Sprint Target      : TBD at PI Planning (step 1.5) — emulator, dev and phone p
 Release Tag        : None — forecast at PI Planning (step 1.5)
 Feature Type       : New
 Original Feature   : N/A
-Linked Stories     : THM01STR32 [Mobile] [Android], THM01STR33 [Mobile] [Android], THM01STR34 [Mobile] [Android], THM01STR35 [API] (step 1.3)
+Linked Stories     : THM01STR32 [Mobile] [Android], THM01STR33 [Mobile] [Android], THM01STR34 [Mobile] [Android], THM01STR35 [API], THM01STR68 [Mobile] [Android] (step 1.3, after story review)
 HLD Reference      : THM01FTR08-HLD
 LLD Reference      : THM01FTR08-LLD
 

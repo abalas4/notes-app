@@ -42,7 +42,7 @@ Sprint Target     : TBD at PI Planning (step 1.5) — planned slice 1
 Release Roll-up   : None yet — derived from child Stories (forecast at PI Planning)
 Feature Type      : New
 Original Feature  : N/A
-Linked Stories    : THM01STR04 [API], THM01STR05 [Mobile] [Android], THM01STR06 [Mobile] [Android] (step 1.3)
+Linked Stories    : THM01STR04 [API], THM01STR05 [Mobile] [Android], THM01STR06 [Mobile] [Android], THM01STR55 [Mobile] [Android] (step 1.3, after story review)
 HLD Reference     : THM01FTR01-HLD
 LLD Reference     : THM01FTR01-LLD
 

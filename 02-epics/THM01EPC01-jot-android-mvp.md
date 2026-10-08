@@ -36,6 +36,7 @@ Lean Business Case
                        minutes (≈ 200 of 981.77 planned). Investment: the owner's time; no licences.
   Go/No-Go Threshold : 60 days after REL-1.0.0: ≥ 3 notes or checklists created per week, no data-loss
                        incident, and reminder reliability ≥ 95 %.
+                       (95 % is the pivot floor; the target stays ≥ 99 % — see Success Metrics.)
   Pivot/Persevere    : Persevere if the threshold is met. If notes are lost or edits fail because the
                        network drops, pivot to offline-first (L-01) before new features. Stop if
                        adoption stays < 1 note per week at 90 days.

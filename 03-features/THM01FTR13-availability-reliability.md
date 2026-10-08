@@ -40,10 +40,11 @@ PI Target          : PI-1
 Release Tag        : None — forecast at PI Planning (step 1.5)
 Feature Type       : New
 Original Feature   : N/A
-Linked Stories     : THM01STR48 [Mobile] [Android], THM01STR49 [Mobile] [Android], THM01STR50 [API] (step 1.3)
+Linked Stories     : THM01STR48 [Mobile] [Android], THM01STR49 [Mobile] [Android], THM01STR50 [API] (step 1.3, after story review)
 HLD Reference      : THM01FTR13-HLD
 LLD Reference      : THM01FTR13-LLD
 
+Coverage notes     : AC-03 (network drop mid-save, client side) is delivered by THM01STR10 AC-03 (FTR02); THM01STR50 covers the server side.
 ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ NFR category
                      · ✅ App SLOs measurable (Epic metrics) · ⚠️ API availability target TBD — HLD (1.7)

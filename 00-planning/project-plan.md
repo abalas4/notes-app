@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.3 User Stories on branch `docs/THM01-stories`. Story ID map (fixed): FTR06 STR01–03 · FTR01 STR04–06 · FTR02 STR07–11 · FTR03 STR12–14 · FTR04 STR15–18 · FTR10 STR19–22 · FTR05 STR23–28 · FTR07 STR29–31 · FTR08 STR32–35 · FTR09 STR36–41 · FTR11 STR42–44 · FTR12 STR45–47 · FTR13 STR48–50 · FTR14 STR51–53. Sub-progress: ✅ STR01–72 written and review fixes applied to all 14 Features (new STR54–72) · ⏳ Feature/Epic text updates (Q-decisions) + Linked Stories · then PR · then story-reviewer per Feature. Open: Trash view (FTR04); sign-out keeps reminders? (STR06).
+**Current phase:** Step 01 (requirements) · **Next step:** 1.3 written on branch `docs/THM01-stories` (72 Stories STR01–72; story review applied; Features/Epic aligned with decisions 1.3-Q) — awaiting PO review/merge via PR. Then 1.4 coverage audit.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -643,7 +643,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 - [x] 0.2 First push to https://github.com/abalas4/notes-app (public; repo created by user 2026-10-08) — done 2026-10-08: pushed; branch protection on `main` (PR required, approvals unticked per D-11, conversation resolution, no bypass, no force-push/deletion; status checks added when CI exists); pre-commit 4.6.2 + gitleaks hook installed and passing
 - [x] 1.1 Strategic Theme + Epic (`/safe-alm-requirements`) — include the R-TX Enabler Feature (§8.1) — **done 2026-10-08 — approved and merged in PR #1 (`d7176c4`)**: THM01, THM01CAP01 (Business), THM01CAP02 (Enabler), THM01EPC01 (Business, Android MVP), THM01EPC02 (Enabler, R-TX/R-AWS). Feature IDs reserved: FTR01–06 (EPC01), FTR07–09 (EPC02)
 - [x] 1.2 Features + NFR Features — **done 2026-10-08 — approved and merged in PR #3 (`a5d0496`); proposed SLOs and WSJF confirmed**: EPC01 → FTR01–06, FTR10 (split), NFR FTR11–14; EPC02 → FTR07–09
-- [ ] 1.3 User Stories + ACs (story-reviewer findings resolved)
+- [~] 1.3 User Stories + ACs (story-reviewer findings resolved) — **written 2026-10-08, awaiting PR approval**: 72 Stories; story-reviewer run on all 14 Features, findings applied; 14 PO decisions (1.3-Q)
 - [ ] 1.4 Coverage audit (coverage-auditor)
 - [ ] 1.5 PI plan, RAID log, PI release roadmap (`/safe-alm-release`) — then **migrate this plan into the standard artefacts and delete `project-plan.md`** (C-01); the tracker continues in `00-planning/PI-1/`
 - [ ] 1.6a Style guide record `06-design/ux/style-guide.md` SG-01…SG-15 built from `../jot-design-source/design.md` — **user approves** (C-03)
@@ -714,3 +714,4 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 (session 3, cont.) | Phase 0.1 done: workspace split into `notes-app/` (repo) + `jot-design-source/` + local `CLAUDE.md`; repo files created; `git init` with origin; first commit with the noreply author email. Next: 0.2 push by user. |
 | 2026-10-08 (session 3, cont.) | 0.2 done (push, branch protection, pre-commit 4.6.2). Step 01 started: 1.1 artefacts written on branch `docs/THM01-strategy-and-epic`; awaiting PR approval. |
 | 2026-10-08 (session 3, cont.) | 1.2 written (FTR01–14). Recovery: feature commits had landed on local `main` after an external branch switch, so PR #2 merged only eb5d290; commits rebased onto `origin/main` as branch `docs/THM01-features-content`, tracker rows lost in the rebase restored. Claude now checks the current branch before every commit. |
+| 2026-10-08 (session 3, cont.) | 1.2 merged (PR #3). 1.3: 53 Stories written, 14 story reviews run, 14 PO decisions recorded (Q12 changed: signed builds only for release hardening), review fixes applied → 72 Stories; Features/Epic aligned. Tools + review notes in workspace story-review-1.3/. Awaiting PR. |

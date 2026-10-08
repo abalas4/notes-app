@@ -44,7 +44,7 @@ Sprint Target      : TBD at PI Planning (step 1.5) — planned slice 1
 Release Tag        : None — forecast at PI Planning (step 1.5)
 Feature Type       : New
 Original Feature   : N/A
-Linked Stories     : THM01STR29 [API], THM01STR30 [Mobile] [Android], THM01STR31 [API] (step 1.3)
+Linked Stories     : THM01STR29 [API], THM01STR30 [Mobile] [Android], THM01STR31 [API], THM01STR67 [Mobile] [Android] (step 1.3, after story review)
 HLD Reference      : THM01FTR07-HLD
 LLD Reference      : THM01FTR07-LLD
 

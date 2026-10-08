@@ -45,13 +45,14 @@ Sprint Target      : TBD at PI Planning (step 1.5) — planned slice 1
 Release Tag        : None — forecast at PI Planning (step 1.5)
 Feature Type       : New
 Original Feature   : N/A
-Linked Stories     : THM01STR01 [API], THM01STR02 [API], THM01STR03 [API] (step 1.3)
+Linked Stories     : THM01STR01 [API], THM01STR02 [API], THM01STR03 [API], THM01STR54 [API] (step 1.3, after story review)
 HLD Reference      : THM01FTR06-HLD
 LLD Reference      : THM01FTR06-LLD
 
 Dependencies       : THM01FTR09 (AWS environments, roles and Cognito); THM01FTR07 (CI gates)
 Constraints        : AWS always-free first; no Secrets Manager (SSM SecureString); stable versions,
                      exact pins, 7-day cooling period; Docker multi-stage, non-root; public repository.
+Coverage notes     : AC-02 (401 + log hygiene) is delivered by THM01STR04 and THM01STR51; AC-05 (503 with Retry-After) by THM01STR54 and THM01STR50. Lambda / HTTP API / X-Ray come from THM01STR39 and THM01STR51.
 ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces (API) · ✅ Feature
                      Type · ✅ Description · ✅ Architectural note · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
