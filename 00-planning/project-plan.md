@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** user merges PR for `docs/THM01-coverage-audit` (1.4 findings recorded). Then 1.5 PI plan, PI release roadmap (`/safe-alm-release`), address RAID-001…005, and migrate this plan into standard artefacts (C-01).
+**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, migrate this plan into standard artefacts (C-01). Branch `docs/THM01-pi-planning`.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -705,6 +705,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | 1.3 | **Approved:** 72 Stories merged (PR #4) | User |
 | 2026-10-08 | 1.4 | Coverage audit: record findings only; fixes deferred to later (user) | User |
 | 2026-10-08 | 1.4 | Coverage audit findings recorded in RAID log (RAID-001…006); not fixed now — user will address later | User |
+| 2026-10-08 | 1.4 | **Merged:** coverage audit findings + RAID log (PR #5) | User |
 | 2026-10-08 | — | §1.3 deferred-capabilities register (L-01…L-04) added | Claude |
 | 2026-10-08 | — | Mockups (wireframe.html W1–W12 + hi-fi canvas) validated as buildable in React Native; caveats → D-09, D-10 | Claude |
 
@@ -719,3 +720,4 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 (session 3, cont.) | 1.2 written (FTR01–14). Recovery: feature commits had landed on local `main` after an external branch switch, so PR #2 merged only eb5d290; commits rebased onto `origin/main` as branch `docs/THM01-features-content`, tracker rows lost in the rebase restored. Claude now checks the current branch before every commit. |
 | 2026-10-08 (session 3, cont.) | 1.2 merged (PR #3). 1.3: 53 Stories written, 14 story reviews run, 14 PO decisions recorded (Q12 changed: signed builds only for release hardening), review fixes applied → 72 Stories; Features/Epic aligned. Tools + review notes in workspace story-review-1.3/. Awaiting PR. |
 | 2026-10-08 (session 3, cont.) | 1.3 merged (PR #4). 1.4 coverage audit run: ATTENTION NEEDED (advisory), 5 gaps → RAID-001…005, RAID-006 assumptions; raid-log.md created; full report in workspace audits/. |
+| 2026-10-08 (session 3, end) | 1.4 merged (PR #5). User paused the session. Resume at 1.5 on local branch `docs/THM01-pi-planning` (this tracker update is committed there, not yet pushed). |
