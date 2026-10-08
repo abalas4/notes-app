@@ -26,9 +26,10 @@ Acceptance Criteria:
   AC-02: Given a note is open, When the owner picks one of the 8 colours or toggles pin or archive,
          Then the change is saved and Home shows the note in the right colour, section (Pinned /
          Others) or the Archive view
-  AC-03: Given a note on Home, When the owner deletes it, Then it disappears, a snackbar offers
-         "Undo" for 5 seconds, and Undo restores it unchanged; after 5 seconds the delete is final
-         for the owner (soft-deleted on the server)
+  AC-03: Given a note on Home, When the owner deletes it, Then it disappears and a snackbar offers
+         "Undo" for 5 seconds; Undo restores it unchanged (the server accepts a restore for 30
+         seconds); after that the delete is final — there is no Trash in the MVP (decisions Q3, Q4;
+         Trash is L-05)
   AC-04: Given the owner is editing a note, When the network is unavailable or the save fails, Then
          the text stays in the editor, an offline / error message with "Retry" is shown, and no edit is
          lost silently

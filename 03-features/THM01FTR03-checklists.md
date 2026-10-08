@@ -26,8 +26,9 @@ Acceptance Criteria:
          "Completed" with strike-through and the progress shows "1 of N done"
   AC-02: Given a list with several items, When the owner drags an item by its handle to a new position,
          Then the new order is saved and is the same after reopening the app
-  AC-03: Given a list with completed items, When the owner chooses "Hide completed", "Uncheck all" or
-         "Delete completed", Then exactly that action is applied and saved
+  AC-03: Given a list with completed items, When the owner chooses "Hide completed", "Uncheck all"
+         or "Delete completed", Then exactly that action is applied and saved with the note, so
+         "Hide completed" stays on after reopening (decision Q5)
   AC-04: Given a list note, When the owner converts it to a text note, Then each item becomes one line
          of the body (checked state dropped after a confirmation), and converting a text note to a
          list turns each non-empty line into an item

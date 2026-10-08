@@ -12,15 +12,16 @@ Description        : A GitHub Actions `ci` workflow that runs on every pull requ
                      check, lint, unit and integration tests with coverage, Docker build and image scan, SCA,
                      SAST (Semgrep), secrets scan (gitleaks), IaC scan (checkov, trivy config, `tofu fmt` /
                      `validate`), licence check, OpenAPI contract check; app type check, lint, Jest unit tests,
-                     Android release build signed in CI, and a MobSF static scan. Results become the required
+                     Android debug build with bundled JS, and a MobSF static scan. Signed release builds come only from a
+                     manual release-hardening workflow (decision Q12). Results become the required
                      status checks on `main`.
 
 Architectural Note : One script per gate under `scripts/` (called by CI and runnable locally), so the plugin's
                      verifier gates and CI give the same answer. Actions pinned to commit SHAs; `GITHUB_TOKEN`
                      least-privilege `permissions:`; no `pull_request_target`; path filters so API-only changes
-                     don't build the APK. The release APK is signed with the keystore held only in GitHub
-                     Environment secrets — the same binary goes to the phone, Device Farm and the GitHub
-                     Release (conformance C-08).
+                     don't build the APK. Only the release-hardening workflow signs the APK, with the keystore held in its own
+                     protected Environment; that one signed binary goes to the final phone UAT, the Device Farm
+                     regression and the GitHub Release (conformance C-08, decision Q12).
 Enablement Value   : Makes the IMPL DoD and the plugin verifier gates (V-series) automatic for every Story of
                      THM01EPC01; produces the signed APK that THM01FTR08 tests.
 ADR Reference      : TBD at step 1.7 — CI design; solo PR approval (D-11)
@@ -28,8 +29,9 @@ ADR Reference      : TBD at step 1.7 — CI design; solo PR approval (D-11)
 Acceptance Criteria:
   AC-01: Given a pull request that changes API code, When CI runs, Then every API gate runs and a failing gate
          blocks the merge through the required status checks on `main`
-  AC-02: Given a pull request that changes app code, When CI runs, Then type check, lint, unit tests, the signed
-         release build and the MobSF scan run and their reports are attached as artifacts
+  AC-02: Given a pull request that changes app code, When CI runs, Then type check, lint, unit tests
+         and the debug build (bundled JS) run and their reports are attached; the signed release APK
+         is built only by the manual release-hardening workflow (decision Q12, THM01STR67)
   AC-03: Given a pull request from a fork, When it is opened, Then no workflow gets secrets or an AWS role, and
          workflow runs wait for the owner's approval
   AC-04: Given the same gate script, When it is run locally and in CI on the same commit, Then both give the same

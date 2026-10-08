@@ -29,8 +29,8 @@ Test Strategy      : k6 smoke-load test against the local stack and `dev`; cold-
 Acceptance Criteria:
   AC-01: Given `dev` at 5 requests per second for 10 minutes, When the k6 test runs, Then API p95 latency is
          below 300 ms and the error rate is below 1 %
-  AC-02: Given the function has been idle long enough to start cold, When the first request arrives, Then it
-         completes in under 1 s
+  AC-02: Given the function has been idle long enough to start cold, When 20 forced cold starts are
+         measured server-side (X-Ray), Then p95 is below 1 s
   AC-03: Given the low-end emulator tier with 500 notes, When the app is cold-started, Then Home is
          interactive within 2 s and scrolling stays at 60 fps
 

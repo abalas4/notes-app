@@ -26,8 +26,10 @@ Acceptance Criteria:
          password is entered in the app
   AC-02: Given the owner is signed in, When the app is closed and reopened (including after a phone
          restart), Then Home opens without a sign-in prompt while the refresh token is valid
-  AC-03: Given the owner is signed in, When they choose "Sign out", Then all tokens are removed from
-         the Android Keystore-backed storage and the Sign-in screen is shown
+  AC-03: Given the owner is signed in, When they choose "Sign out" and confirm, Then the refresh
+         token is revoked at Cognito, all tokens are removed from the Keystore-backed storage, all
+         scheduled reminder notifications are cancelled, and the Sign-in screen is shown (decisions
+         Q1, Q13)
   AC-04: Given a request to any API route except health, When it has no access token or an expired /
          invalid one, Then the API returns 401 with the standard error body and no data
   AC-05: Given the sign-in page is open, When the owner cancels it or the network fails, Then the app
