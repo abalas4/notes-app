@@ -3,8 +3,10 @@
 A simple, colour-coded mobile app for capturing **notes**, **checklists** and **reminders**.
 Android first, iOS later from the same React Native codebase, backed by a FastAPI service on AWS.
 
-> **Status:** planning. The stack is confirmed; requirements (Step 01) start next.
-> The plan and progress tracker is [`00-planning/project-plan.md`](00-planning/project-plan.md).
+> **Status:** PI-1 in progress (2026-10-08 → 2026-12-16). Plans: [`00-planning/PI-1/`](00-planning/PI-1/),
+> [`10-release/PI-1-release-roadmap.md`](10-release/PI-1-release-roadmap.md), RAID log
+> [`00-planning/raid-log.md`](00-planning/raid-log.md). Architecture decisions: [`06-design/adr/`](06-design/adr/).
+> How we work: [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## How this repository is organised
 
