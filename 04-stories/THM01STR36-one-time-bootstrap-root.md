@@ -32,8 +32,8 @@ Acceptance Criteria:
          unreadable; and a second concurrent apply fails on the lock
 
 Story Points    : 3
-Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 1
-Release Tag     : None — forecast at PI Planning (step 1.5)
+Sprint Target   : PI-1 iteration 02 (slice 1)
+Release Tag     : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08; confirmed at Sprint Planning)
 Story Type      : New
 Original Story  : N/A
 Linked WI       : TBD at step 1.7
@@ -45,7 +45,7 @@ DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature 
                   ✅ One primary surface tag + Component · ✅ Story Type New / Original N/A
                   ✅ As a / I want / So that · ✅ 4 ACs in Gherkin · ✅ Sized 3 pts · ✅ Analytics line set
                   ✅ Dependencies noted
-                  ⚠️ Release Tag — forecast at PI Planning (1.5), confirmed at Sprint Planning
+                  ✅ Release Tag REL-1.0.0 forecast (PI-1 Planning); confirmed at Sprint Planning
                   ⚠️ Work Items — identified at step 1.7 (DESIGN / HLD / DFMEA / LLD / IMPL / TEST)
 DoD Check       : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

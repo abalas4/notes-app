@@ -42,8 +42,8 @@ Acceptance Criteria:
          actions that reorder the item
 
 Story Points    : 3
-Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 3
-Release Tag     : None — forecast at PI Planning (step 1.5) (Android app version / build set at release; min supported app version per HLD)
+Sprint Target   : PI-2+ — forecast after iteration 03 velocity (slice 3)
+Release Tag     : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08; confirmed at Sprint Planning) (Android app version / build set at release; min supported app version per HLD)
 Story Type      : New
 Original Story  : N/A
 Linked WI       : TBD at step 1.7
@@ -57,7 +57,7 @@ DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature 
                   ✅ Dependencies noted
                   ⚠️ UX Spec Approved for Android — step 1.6 (needs style guide Approved, step 1.6a)
                   ⚠️ Platform minimum Android version — HLD (step 1.7)
-                  ⚠️ Release Tag — forecast at PI Planning (1.5), confirmed at Sprint Planning
+                  ✅ Release Tag REL-1.0.0 forecast (PI-1 Planning); confirmed at Sprint Planning
                   ⚠️ Work Items — identified at step 1.7 (DESIGN / HLD / DFMEA / LLD / IMPL / TEST)
 DoD Check       : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

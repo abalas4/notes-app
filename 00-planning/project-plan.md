@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). 1.6a style guide Approved v1.0 on branch `docs/THM01-style-guide` (awaiting PR).
+**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). Branch `docs/THM01-pi1-planning`. Started 2026-10-08: tracker-tool + cadence decisions recorded; PI-1 records, release roadmap + Draft REL-1.0.0, Story/Feature forecast tags and RAID-001/002/003/005 done and committed; RAID-004 decided (Delivers refs per iteration; STR01, STR29 done). **Next: user opens the PI-1 plan PR; then C-01 plan migration in its own PR** (technology ADRs written with the first HLD in iteration 01).
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -645,7 +645,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 - [x] 1.2 Features + NFR Features — **done 2026-10-08 — approved and merged in PR #3 (`a5d0496`); proposed SLOs and WSJF confirmed**: EPC01 → FTR01–06, FTR10 (split), NFR FTR11–14; EPC02 → FTR07–09
 - [x] 1.3 User Stories + ACs (story-reviewer findings resolved) — **done 2026-10-08 — merged in PR #4 (`57231a7`)**: 72 Stories; story-reviewer run on all 14 Features, findings applied; 14 PO decisions (1.3-Q)
 - [x] 1.4 Coverage audit (coverage-auditor) — **done 2026-10-08**: verdict ATTENTION NEEDED (advisory); stage expectation met for both Epics; 0 broken links; 5 gaps recorded as RAID-001…005 (+ RAID-006 HLD assumptions) in `00-planning/raid-log.md`; fixes deferred by the user
-- [x] 1.6a Style guide record `06-design/ux/style-guide.md` SG-01…SG-15 — **done 2026-10-08: Approved v1.0** (UX Lead, PO, Tech Lead); P-01…P-07 accepted; SG-13/SG-14 N/A. Moved before 1.5: Feature DoR for [Mobile] Features requires it (`06-alm-rules.md`)
+- [x] 1.6a Style guide record `06-design/ux/style-guide.md` SG-01…SG-15 — **done 2026-10-08: Approved v1.0** (UX Lead, PO, Tech Lead), merged in PR #7 (`bc08e38`); P-01…P-07 accepted; SG-13/SG-14 N/A. Moved before 1.5: Feature DoR for [Mobile] Features requires it (`06-alm-rules.md`)
 - [ ] 1.5 PI plan, RAID log, PI release roadmap (`/safe-alm-release`) — then **migrate this plan into the standard artefacts and delete `project-plan.md`** (C-01); the tracker continues in `00-planning/PI-1/`
 - [ ] 1.6 UX spec per Feature mapped to W1–W12 (+ empty / error states)
 - [ ] 1.7 HLD, DFMEA, LLD per Feature + ADRs + OpenAPI 3.1 — **includes R-NOTIF: vet Notifee (or pick fallback) before LLD approval**
@@ -710,6 +710,12 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | — | Mockups (wireframe.html W1–W12 + hi-fi canvas) validated as buildable in React Native; caveats → D-09, D-10 | Claude |
 | 2026-10-08 | 1.6a | **Order fixed: 1.6a style guide before 1.5 PI planning.** Feature DoR for [Mobile] Features needs the Approved style guide (+ SG-15); HLD/DFMEA/LLD stay as PI-1 Work Items (Feature DoR needs only their IDs). Conformance fix, not a deviation | User |
 | 2026-10-08 | 1.6a | **Style guide v1.0 Approved** with P-01 outline-strong `#857F76` for control boundaries · P-02 no Teal text on note colours · P-03 Ink-soft unchecked checkbox border · P-04 portrait only in MVP · P-05 empty / loading / error / offline patterns from Story copy · P-06 motion 150/250/300 ms, honour Remove animations · P-07 adaptive app icon + plain splash (artwork = `[DESIGN]` WI in slice 1) | User |
+| 2026-10-08 | 1.5 | Backlog tracker tool = **local workspace tooling** (outside git, reads the standard artefact folders only; no Story/ALM lifecycle). **One team** with one capacity; backlog views filtered by component (API / Mobile / Enabler) | User |
+| 2026-10-08 | 1.5 | **PI-1 cadence:** 2-week iterations; 4 development iterations + 1 IP; user full-time; PI-1 starts 2026-10-08 — I1 10-08→10-21 · I2 10-22→11-04 · I3 11-05→11-18 · I4 11-19→12-02 · IP 12-03→12-16. Capacity baseline 8 pts/iteration (plugin new-team rule) until 3 iterations of velocity exist | User |
+| 2026-10-08 | 1.5 | **PI-1 capacity allocation:** Business 55 % · Enablers 25 % · tech debt/upgrades/reliability 5 % (below the 15–20 % default: greenfield, no debt yet — agreement recorded in `objectives.md`; back to 15 % from PI-2) · defects 0 % · buffer 15 % | User |
+| 2026-10-08 | 1.5 | PI-1 committed 22 pts: THM01FTR06 (STR01, STR54, STR02, STR03) + STR29 + STR36; stretch STR37, STR40, STR04, STR30. Objectives 1–3 committed (BV 8 / 7 / 5), 4–5 uncommitted (BV 6 / 5). Cadence **PI train**; REL-1.0.0 Draft, all 72 Stories forecast, date TBD after iteration 03 velocity. RAID-001/002/003/005 resolved | Claude (PO confirms in PR) |
+| 2026-10-08 | 1.5 | RAID-004: Stories get a `Delivers` line (Feature AC ← Story AC) at the iteration planning where they enter; C-01 plan migration in a separate PR after the PI-1 plan PR | User |
+| 2026-10-08 | 1.5 | **Sprint estimates are indicative** — AI is the developer, so iterations may finish sooner. Iterations keep the 2-week time box; finished early → pull the next DoR-ready Stories (stretch first, then PI-2+ by dependency / WSJF), recorded in the iteration plan; re-forecast REL-1.0.0 at the iteration 01 review if velocity is well above baseline | User |
 
 ### Session log
 | Date | Session summary |

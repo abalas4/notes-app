@@ -36,8 +36,8 @@ Acceptance Criteria:
   AC-04: Given the phone restarts, When it boots, Then all future reminders are rescheduled
 
 Sizing             : M
-PI Target          : PI-1
-Release Tag        : None — forecast at PI Planning (step 1.5)
+PI Target          : PI-2+ (forecast after iteration 03 velocity)
+Release Tag        : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08)
 Feature Type       : New
 Original Feature   : N/A
 Linked Stories     : THM01STR48 [Mobile] [Android], THM01STR49 [Mobile] [Android], THM01STR50 [API] (step 1.3, after story review)

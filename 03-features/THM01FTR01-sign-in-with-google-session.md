@@ -37,9 +37,9 @@ Acceptance Criteria:
 
 Sizing            : M
 WSJF              : (8 + 10 + 8) / 5 = 5.2   (proposed; every other Feature needs a signed-in user)
-PI Target         : PI-1
-Sprint Target     : TBD at PI Planning (step 1.5) — planned slice 1
-Release Roll-up   : None yet — derived from child Stories (forecast at PI Planning)
+PI Target         : PI-2 (STR04 stretch in PI-1)
+Sprint Target     : PI-2+ — forecast after iteration 03 velocity (was: planned slice 1)
+Release Roll-up   : REL-1.0.0 (all child Stories forecast; PI-1 Planning 2026-10-08)
 Feature Type      : New
 Original Feature  : N/A
 Linked Stories    : THM01STR04 [API], THM01STR05 [Mobile] [Android], THM01STR06 [Mobile] [Android], THM01STR55 [Mobile] [Android] (step 1.3, after story review)
@@ -59,7 +59,7 @@ DoR Check         : ✅ Stored at 03-features/THM01FTR01-<slug>.md · ✅ Parent
                     · ✅ Surfaces filled (API, Mobile Android) · ✅ Feature Type New / Original N/A
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs in Gherkin · ✅ Sized M · ✅ WSJF
                     · ✅ PI Target · ✅ HLD / LLD IDs assigned · ✅ Dependencies and constraints · ✅ Owner
-                    ⚠️ Sprint Target — PI Planning (1.5)
+                    ✅ Sprint Target set at PI-1 Planning
                     ✅ Child Stories (step 1.3)
                     ⚠️ Style guide Approved with SG-15 — step 1.6a
                     ⚠️ Platform scope: minimum OS version and technology ADR — HLD (1.7)

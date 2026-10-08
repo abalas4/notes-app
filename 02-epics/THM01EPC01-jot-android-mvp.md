@@ -123,21 +123,21 @@ Requirement Coverage Assessment — THM01EPC01                         Product S
   | Functional | Defined | THM01FTR01–THM01FTR05, THM01FTR10 | Product Owner (@abalas4) | Step 1.2 | Scope = MVP Definition above; screens W1–W12 |
   | Technical / Enabler | Defined | THM01FTR06; THM01EPC02 | Architecture Lead (@abalas4) | Step 1.2 | API foundation here; delivery runway in THM01EPC02 |
   | Data | Evolving | — | Architecture Lead (@abalas4) | Step 1.7 (HLD) | Note, checklist, label, reminder entities with `version`, `updatedAt`, soft delete; retention TBD |
-  | Interface & Integration | Evolving | THM01FTR06 | Architecture Lead (@abalas4) | Step 1.7 (LLD, OpenAPI 3.1) | REST API `jot-api`; Cognito + Google sign-in; OS notifications |
+  | Interface & Integration | Evolving | THM01FTR06 (THM01STR03 OpenAPI contract) | Architecture Lead (@abalas4) | Step 1.7 (LLD, OpenAPI 3.1) | REST API `jot-api`; Cognito + Google sign-in; OS notifications |
   | Transition & Migration | N/A | — | Architecture Lead (@abalas4) | — | New product, no existing data. Item-schema-version migration tests cover future changes (C-09) |
   | Constraints | Defined | Epic `Constraints` field | Product Owner (@abalas4) | — | See field |
   | 1 Performance | Evolving | THM01FTR12 | Architecture Lead (@abalas4) | HLD approval (1.7) | Initial: API p95 < 300 ms warm / < 1 s cold; app cold start ≤ 2 s on the low-end tier; screen transition ≤ 300 ms |
   | 2 Scalability | Deferred | — | Architecture Lead (@abalas4) | Before any public distribution | Single user; serverless scales on demand |
-  | 3 Availability & Reliability | Evolving | THM01FTR13 | Architecture Lead (@abalas4) | HLD approval (1.7) | Initial: crash-free users ≥ 99.5 %; ANR ≤ 0.47 %; reminders on time ≥ 99 %; API availability target TBD |
+  | 3 Availability & Reliability | Evolving (app metrics Defined in THM01FTR13; API availability TBD) | THM01FTR13 | Architecture Lead (@abalas4) | HLD approval (1.7) | Initial: crash-free users ≥ 99.5 %; ANR ≤ 0.47 %; reminders on time ≥ 99 %; API availability target TBD |
   | 4 Security | Evolving | THM01FTR11 | Architecture Lead (@abalas4) | HLD approval (1.7) | Initial: OWASP MASVS L1; Cognito JWT on every API route; tokens in Keystore; TLS only; no secrets in the app or the repo; SCA + SAST + secrets scan on every build |
   | 5 Compliance & Regulatory | N/A | — | Product Owner (@abalas4) | Before any public distribution | Compliance Regimes: None (personal app) |
   | 6 Observability & Monitoring | Evolving | THM01FTR14 | Architecture Lead (@abalas4) | HLD approval (1.7) | Initial: structured JSON logs with traceId (CloudWatch), X-Ray traces, an alarm per SLO; crash reporting |
-  | 7 Usability & Accessibility | Evolving | — | Product Owner (@abalas4) | Step 1.6a (style guide) | Initial: WCAG 2.1 AA applied to native (TalkBack labels, 48 dp targets, font scaling 200 %) |
-  | 8 Maintainability | Evolving | — | Architecture Lead (@abalas4) | Step 1.2 | Initial: coverage ≥ 80 % new code; mutation ≥ 60 % business logic; no new Critical SAST findings |
+  | 7 Usability & Accessibility | Evolving | 06-design/ux/style-guide.md v1.0 (SG-10) | Product Owner (@abalas4) | First `[Mobile]` UX Spec approval | Initial: WCAG 2.1 AA applied to native (TalkBack labels, 48 dp targets, font scaling 200 %) |
+  | 8 Maintainability | Evolving | THM01FTR07 (THM01STR29, THM01STR30 coverage / SAST gates) | Architecture Lead (@abalas4) | THM01FTR07 HLD (PI-1 iteration 01) | Initial: coverage ≥ 80 % new code; mutation ≥ 60 % business logic; no new Critical SAST findings |
   | 9 Portability & Interoperability | Evolving | — | Architecture Lead (@abalas4) | Step 1.7 (HLD platform scope) | Android minimum version TBD (target ≥ 95 % of devices); iOS-ready codebase; OpenAPI 3.1 |
   | 10 Disaster Recovery & BC | Evolving | — | Architecture Lead (@abalas4) | Step 1.7 (HLD) | Initial: DynamoDB point-in-time recovery in prod; RPO / RTO TBD |
-  | 11 Data Quality & Integrity | Evolving | — | Architecture Lead (@abalas4) | Step 1.7 (LLD) | Idempotent writes; optimistic concurrency (version / If-Match → 409); validation at the API boundary |
-  | 12 Capacity, Resource & Cost | Defined | Epic Success Metric | Product Owner (@abalas4) | Monthly | API cost ≤ US$1 / month; AWS Budgets alert; app download size budget TBD |
+  | 11 Data Quality & Integrity | Evolving | THM01STR02, THM01STR08 | Architecture Lead (@abalas4) | Step 1.7 (LLD) | Idempotent writes; optimistic concurrency (version / If-Match → 409); validation at the API boundary |
+  | 12 Capacity, Resource & Cost | Defined | Epic Success Metric; THM01STR37 (budgets), THM01STR69 (alarms) | Product Owner (@abalas4) | Monthly | API cost ≤ US$1 / month; AWS Budgets alert; app download size budget TBD |
   | 13 AI / ML Fairness | N/A | — | — | — | No AI / ML in the product |
   | 14 Serviceability & Supportability | Evolving | — | Architecture Lead (@abalas4) | Step 6.1 (operations readiness) | Runbook per DFMEA failure mode with S ≥ 8; rollback = previous API image + hotfix APK |
   | 15 Privacy & Data Protection | Evolving | — | Product Owner (@abalas4) | Step 1.7 (HLD data inventory) | Data minimisation; no personal data in logs, metrics or notifications on the lock screen; delete-account path TBD |

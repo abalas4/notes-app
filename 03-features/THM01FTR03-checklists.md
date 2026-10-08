@@ -37,9 +37,9 @@ Acceptance Criteria:
 
 Sizing            : M
 WSJF              : (8 + 6 + 3) / 5 = 3.4   (proposed)
-PI Target         : PI-1
-Sprint Target     : TBD at PI Planning (step 1.5) — planned slice 3
-Release Roll-up   : None yet — derived from child Stories
+PI Target         : PI-2+ (forecast after iteration 03 velocity)
+Sprint Target     : PI-2+ — forecast after iteration 03 velocity (was: planned slice 3)
+Release Roll-up   : REL-1.0.0 (all child Stories forecast; PI-1 Planning 2026-10-08)
 Feature Type      : New
 Original Feature  : N/A
 Linked Stories    : THM01STR12 [API], THM01STR13 [Mobile] [Android], THM01STR14 [Mobile] [Android], THM01STR59 [API], THM01STR60 [Mobile] [Android], THM01STR61 [Mobile] [Android] (step 1.3, after story review)
@@ -54,7 +54,7 @@ ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                     · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner
-                    ⚠️ Sprint Target — PI Planning (1.5)
+                    ✅ Sprint Target set at PI-1 Planning
                     ✅ Child Stories (step 1.3)
                     ⚠️ Style guide Approved with SG-15 — step 1.6a
                     ⚠️ Platform scope minimum OS version — HLD (1.7)
