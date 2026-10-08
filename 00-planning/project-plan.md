@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). Branch `docs/THM01-pi1-planning`. Started 2026-10-08: tracker-tool + cadence decisions recorded; allocation agreed; next: write `00-planning/PI-1/` records (capacity, WSJF, objectives, ROAM, dependencies, iteration plans) + `10-release/PI-1-release-roadmap.md`, then RAID-001…005 and C-01 migration.
+**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). Branch `docs/THM01-pi1-planning`. Started 2026-10-08: tracker-tool + cadence decisions recorded; PI-1 records, release roadmap + Draft REL-1.0.0, Story/Feature forecast tags and RAID-001/002/003/005 done and committed; **remaining: RAID-004 decision, C-01 plan migration, then PR**.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -713,6 +713,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | 1.5 | Backlog tracker tool = **local workspace tooling** (outside git, reads the standard artefact folders only; no Story/ALM lifecycle). **One team** with one capacity; backlog views filtered by component (API / Mobile / Enabler) | User |
 | 2026-10-08 | 1.5 | **PI-1 cadence:** 2-week iterations; 4 development iterations + 1 IP; user full-time; PI-1 starts 2026-10-08 — I1 10-08→10-21 · I2 10-22→11-04 · I3 11-05→11-18 · I4 11-19→12-02 · IP 12-03→12-16. Capacity baseline 8 pts/iteration (plugin new-team rule) until 3 iterations of velocity exist | User |
 | 2026-10-08 | 1.5 | **PI-1 capacity allocation:** Business 55 % · Enablers 25 % · tech debt/upgrades/reliability 5 % (below the 15–20 % default: greenfield, no debt yet — agreement recorded in `objectives.md`; back to 15 % from PI-2) · defects 0 % · buffer 15 % | User |
+| 2026-10-08 | 1.5 | PI-1 committed 22 pts: THM01FTR06 (STR01, STR54, STR02, STR03) + STR29 + STR36; stretch STR37, STR40, STR04, STR30. Objectives 1–3 committed (BV 8 / 7 / 5), 4–5 uncommitted (BV 6 / 5). Cadence **PI train**; REL-1.0.0 Draft, all 72 Stories forecast, date TBD after iteration 03 velocity. RAID-001/002/003/005 resolved | Claude (PO confirms in PR) |
 
 ### Session log
 | Date | Session summary |
