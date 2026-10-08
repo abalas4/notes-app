@@ -33,6 +33,8 @@ Acceptance Criteria:
   AC-05: Given the same commit, When a gate script runs locally and in CI, Then each test case and check
          has the same pass / fail outcome
 
+Delivers        : THM01FTR07 AC-01 (API part) ← AC-01, AC-02, AC-04 · THM01FTR07 AC-03 ← AC-03 · THM01FTR07 AC-04 ← AC-05
+
 Story Points    : 5
 Sprint Target   : PI-1 iteration 01 (slice 1)
 Release Tag     : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08; confirmed at Sprint Planning)

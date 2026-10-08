@@ -29,6 +29,8 @@ Acceptance Criteria:
   AC-03: Given DynamoDB Local is stopped, When GET /api/v1/ready is called, Then 503 SERVICE_UNAVAILABLE in
          the standard error body with checks.store "unavailable" within 2 s
 
+Delivers        : THM01FTR06 AC-01 ← AC-01, AC-02 · THM01FTR06 AC-05 (readiness part) ← AC-03
+
 Story Points    : 3
 Sprint Target   : PI-1 iteration 01 (slice 1)
 Release Tag     : REL-1.0.0 (forecast at PI-1 Planning 2026-10-08; confirmed at Sprint Planning)
