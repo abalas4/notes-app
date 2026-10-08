@@ -20,10 +20,10 @@ Style Guide     : v1.1 incl. SG-15 — pending approval (step 1.6a)
 Usability Check : Proposed "Not required — single-user app; the owner is the Product Owner" (PO decides at 1.6)
 
 Screen / flow:
-  Layout        : List of labels with note counts and Edit; inline rename; Delete label with confirmation; explanatory note
-  Key Elements  : Create new label row; label row (name, count, Edit); rename field; Delete label; "Deleting a label never deletes notes" text
-  States        : Default | Editing | Empty | Saving | Error (inline name exists / empty) | Offline
-  Navigation    : Drawer → Edit labels; back to drawer
+  Layout        : Create new label row; labels with note counts and Edit; inline rename; Delete label with confirmation; explanatory note
+  Key Elements  : Create row; label row (name, count, Edit); rename field; Delete label; "Deleting a label never deletes notes"
+  States        : Default | Editing | Empty | Saving | Error (inline / Retry) | Offline
+  Navigation    : Drawer → Edit labels; back to the drawer
 Device behaviour:
   Offline       : Online-only (D-07): offline banner; actions that need the API are disabled or fail visibly with Retry; nothing is shown as saved until the API confirms
   Permissions   : None
@@ -34,11 +34,14 @@ Device behaviour:
   Privacy       : None — no data collection change; no store listing (C-05)
 
 Acceptance Criteria:
-  AC-01: Given a label, When the owner renames it, Then every note card shows the new name
-  AC-02: Given a label used by notes, When the owner deletes it and confirms, Then it disappears from the
-         drawer and the notes, and all notes remain
-  AC-03: Given the owner renames a label to an existing name or to empty, When they confirm, Then an inline
-         message explains why and nothing changes
+  AC-01: Given the Edit labels screen, When the owner creates a new unique label, Then it appears with
+         count 0; if the name exists or is empty, an inline message explains why and nothing is created
+  AC-02: Given a label, When the owner renames it, Then Home's note cards show the new name; if the name
+         exists or is empty, an inline message explains why and nothing changes
+  AC-03: Given a label used by notes, When the owner deletes it and confirms, Then it disappears from the
+         list and the drawer and all its notes remain; When they cancel, nothing changes
+  AC-04: Given there is no network or the API fails, When the owner creates, renames or deletes, Then an
+         error with Retry is shown and the list is unchanged
 
 Story Points    : 3
 Sprint Target   : TBD at PI Planning (step 1.5) — planned slice 4
@@ -52,7 +55,7 @@ Analytics       : None — no Epic Success Metric is measured from this Story
 ALM Status      : New
 DoR Check       : ✅ Stored at 04-stories/<ID>-<slug>.md · ✅ Parent Feature linked
                   ✅ One primary surface tag + Component · ✅ Story Type New / Original N/A
-                  ✅ As a / I want / So that · ✅ 3 ACs in Gherkin · ✅ Sized 3 pts · ✅ Analytics line set
+                  ✅ As a / I want / So that · ✅ 4 ACs in Gherkin · ✅ Sized 3 pts · ✅ Analytics line set
                   ✅ Dependencies noted
                   ⚠️ UX Spec Approved for Android — step 1.6 (needs style guide Approved, step 1.6a)
                   ⚠️ Platform minimum Android version — HLD (step 1.7)
