@@ -15,7 +15,7 @@ Endpoint Contract: N/A — pipeline / infrastructure Story, no HTTP endpoint
 UX Spec         : N/A — no screens (Feature has no UI; style guide not required)
 
 Business Rules  :
-  BR-01: Capacity mode (on-demand or small provisioned) decided in the LLD (cost note, plan §7)
+  BR-01: Capacity mode (on-demand or small provisioned) decided in the LLD (cost note, ADR-012)
   BR-02: Prod table: point-in-time recovery on, deletion protection on, prevent_destroy (IAC-10, IAC-15)
   BR-03: Alarms defined by THM01STR52 are created here, notifying the owner's email through one SNS topic
 

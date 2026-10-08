@@ -16,7 +16,7 @@ UX Spec         : N/A — no screens (Feature has no UI; style guide not require
 
 Business Rules  :
   BR-01: Creates only: versioned, encrypted, public-access-blocked state bucket; GitHub OIDC identity provider; jot-gh-prereqs role trusted only for aws-prereqs.yml in the aws-admin Environment
-  BR-02: Runs locally with the owner's credentials; Claude never reads them (plan §2 rule 5); the README gives the exact commands
+  BR-02: Runs locally with the owner's credentials; Claude never reads them (CONTRIBUTING.md, engineering rule 4); the README gives the exact commands
   BR-03: After apply, its state moves into the state bucket so the aws-prereqs workflow owns these resources from then on
   BR-04: State encrypted with OpenTofu state encryption and locked with S3 native locking
   BR-05: No account ID, ARN or bucket name committed; values come from git-ignored *.tfvars (a *.tfvars.example is committed)

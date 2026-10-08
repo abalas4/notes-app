@@ -27,7 +27,7 @@ Lean Business Case
   Solution Overview  : GitHub Actions (free and unmetered for this public repository) with OIDC to
                        AWS; OpenTofu roots `infra/envs/{bootstrap,shared,dev,prod}`; workflows
                        `ci`, `emulator-tests`, `device-farm`, `dev-up`, `dev-down`, `aws-prereqs`,
-                       `deploy-prod`, `drift-check`; script `scripts/phone-test.sh` (plan §8.1, §8.2).
+                       `deploy-prod`, `drift-check`; script `scripts/phone-test.sh` (ADR-002, ADR-008).
   Leading Indicators : The first app Story is tested on emulator and phone using only the workflows and
                        the script; the dev environment is created and destroyed by workflow with no
                        console step.
@@ -104,7 +104,7 @@ Risks             :
 Requirement Coverage Assessment — THM01EPC02                         Product Stage: MVP
   | Type / Category | Status | Artefact ID(s) | Owner | Review / Trigger | Note (target, reason) |
   |---|---|---|---|---|---|
-  | Functional | Defined | THM01FTR07–THM01FTR09 | Architecture Lead (@abalas4) | Step 1.3 | Plan §8.1 (R-TX), §8.2 (R-AWS) |
+  | Functional | Defined | THM01FTR07–THM01FTR09 | Architecture Lead (@abalas4) | Step 1.3 | R-TX (THM01FTR08), R-AWS (ADR-008) |
   | Technical / Enabler | Defined | THM01FTR07–THM01FTR09 | Architecture Lead (@abalas4) | Step 1.3 | This whole Epic is enabler work |
   | Data | N/A | — | — | — | No product data; state files and test reports only |
   | Interface & Integration | Evolving | THM01FTR08, THM01FTR09 | Architecture Lead (@abalas4) | Step 1.7 (HLD) | GitHub OIDC ↔ AWS STS; Device Farm API; Actions artifacts and commit statuses |

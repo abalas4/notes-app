@@ -8,7 +8,7 @@ Tags: [Implementation] [API] [Mobile] [Infra]
 Parent Epic        : THM01EPC02
 Surfaces           : API (apis/jot-api — dev environment for tests) · Mobile Android (mobile/jot — test runs)
 Feature Owner      : Architecture Lead (@abalas4)
-Description        : Requirement R-TX (plan §8.1). Manual GitHub Actions workflows started with "Run workflow"
+Description        : Requirement R-TX (ADR-002). Manual GitHub Actions workflows started with "Run workflow"
                      or `gh workflow run`: `emulator-tests` (also on every PR), `device-farm`, `dev-up` and
                      `dev-down`; and one local script, `scripts/phone-test.sh`, that builds (or downloads the
                      CI-built APK for a commit with `--from-ci <sha>` (debug build during slices; the signed APK only
