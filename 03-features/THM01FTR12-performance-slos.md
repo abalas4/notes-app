@@ -39,7 +39,7 @@ PI Target          : PI-1
 Release Tag        : None — forecast at PI Planning (step 1.5)
 Feature Type       : New
 Original Feature   : N/A
-Linked Stories     : TBD at step 1.3
+Linked Stories     : THM01STR45 [API], THM01STR46 [API], THM01STR47 [Mobile] [Android] (step 1.3)
 HLD Reference      : THM01FTR12-HLD
 LLD Reference      : THM01FTR12-LLD
 
@@ -47,7 +47,7 @@ ALM Status         : Refined (PR #3, 2026-10-08)
 DoR Check          : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ NFR category
                      · ⚠️ SLOs proposed (plan §12 and plugin mobile defaults) — Product Owner confirms by
                      approving this PR · ✅ Test strategy · ✅ 3 ACs · ✅ Sized S · ✅ PI Target · ✅ HLD / LLD IDs
-                     · ✅ Owner · ⚠️ Child Stories — step 1.3
+                     · ✅ Owner · ✅ Child Stories (step 1.3)
 DoD Check          : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

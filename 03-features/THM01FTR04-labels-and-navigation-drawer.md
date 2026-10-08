@@ -40,7 +40,7 @@ Sprint Target     : TBD at PI Planning (step 1.5) — planned slice 4
 Release Roll-up   : None yet — derived from child Stories
 Feature Type      : New
 Original Feature  : N/A
-Linked Stories    : TBD at step 1.3 (≥ 1 [API], ≥ 1 [Mobile] [Android])
+Linked Stories    : THM01STR15 [API], THM01STR16 [Mobile] [Android], THM01STR17 [Mobile] [Android], THM01STR18 [Mobile] [Android] (step 1.3)
 HLD Reference     : THM01FTR04-HLD
 LLD Reference     : THM01FTR04-LLD
 
@@ -55,7 +55,7 @@ ALM Status        : Refined (PR #3, 2026-10-08)
 DoR Check         : ✅ Stored at standard path · ✅ Parent Epic · ✅ Tags · ✅ Surfaces · ✅ Feature Type
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs · ✅ Sized M · ✅ WSJF · ✅ PI Target
                     · ✅ HLD / LLD IDs · ✅ Dependencies and constraints · ✅ Owner
-                    ⚠️ Sprint Target — PI Planning (1.5) · ⚠️ Child Stories — step 1.3
+                    ⚠️ Sprint Target — PI Planning (1.5) · ✅ Child Stories (step 1.3)
                     ⚠️ Style guide Approved with SG-15 — step 1.6a · ⚠️ Platform scope minimum OS — HLD (1.7)
                     ⚠️ Open question on Trash — UX spec (1.6)
 DoD Check         : ⚠️ Not started

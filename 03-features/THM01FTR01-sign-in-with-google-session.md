@@ -40,7 +40,7 @@ Sprint Target     : TBD at PI Planning (step 1.5) — planned slice 1
 Release Roll-up   : None yet — derived from child Stories (forecast at PI Planning)
 Feature Type      : New
 Original Feature  : N/A
-Linked Stories    : TBD at step 1.3 (≥ 1 [API], ≥ 1 [Mobile] [Android])
+Linked Stories    : THM01STR04 [API], THM01STR05 [Mobile] [Android], THM01STR06 [Mobile] [Android] (step 1.3)
 HLD Reference     : THM01FTR01-HLD
 LLD Reference     : THM01FTR01-LLD
 
@@ -58,7 +58,7 @@ DoR Check         : ✅ Stored at 03-features/THM01FTR01-<slug>.md · ✅ Parent
                     · ✅ Description · ✅ Benefit hypothesis · ✅ 5 ACs in Gherkin · ✅ Sized M · ✅ WSJF
                     · ✅ PI Target · ✅ HLD / LLD IDs assigned · ✅ Dependencies and constraints · ✅ Owner
                     ⚠️ Sprint Target — PI Planning (1.5)
-                    ⚠️ Child Stories — step 1.3 (≥ 3 needed at Ready)
+                    ✅ Child Stories (step 1.3)
                     ⚠️ Style guide Approved with SG-15 — step 1.6a
                     ⚠️ Platform scope: minimum OS version and technology ADR — HLD (1.7)
 DoD Check         : ⚠️ Not started
