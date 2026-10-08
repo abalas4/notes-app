@@ -625,7 +625,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Phase 0 (setup) · **Next step:** D-01…D-11 and Q3 confirmed (D-08 = OpenTofu). Q5 = public repo. Q6 = no licence (all rights reserved). Q2 = 981.77 Device Farm minutes left. Q1 = legacy free tier. Q4 = abalas4/notes-app. **All planning queries answered; P-03 done. Next: Phase 0 step 0.1.**
+**Current phase:** Phase 0 (setup) · **Next step:** 0.2 — user pushes `main` to GitHub and applies the README one-time GitHub settings; then Step 01 `/safe-alm-requirements`.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -638,7 +638,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 - [x] P-02 Draft technology plan (this file)
 - [x] P-02a Conformance check against the plugin (§0, C-01…C-09); plan moved to `00-planning/`
 - [x] P-03 **User confirms the technology stack** (D-01…D-11, Q1–Q6) — 2026-10-08
-- [ ] 0.1 git init, `.gitignore`, `.gitattributes`, `.editorconfig`, `.pre-commit-config.yaml`, README, `.github/SECURITY.md`, `CODEOWNERS`, workspace `CLAUDE.md` (outside the repo); create `notes-app/` (repo) in the workspace, move `00-planning/` into it, move `design_style_guide/` → workspace `jot-design-source/` (C-02); structure check: nothing at the root outside §9
+- [x] 0.1 git init, `.gitignore`, `.gitattributes`, `.editorconfig`, `.pre-commit-config.yaml`, README, `.github/SECURITY.md`, `CODEOWNERS`, workspace `CLAUDE.md` (outside the repo); create `notes-app/` (repo) in the workspace, move `00-planning/` into it, move `design_style_guide/` → workspace `jot-design-source/` (C-02); structure check: nothing at the root outside §9 — done 2026-10-08 (commit `eda4450`; repo-local author = GitHub noreply email)
 - [ ] 0.2 First push to https://github.com/abalas4/notes-app (public; repo created by user 2026-10-08)
 - [ ] 1.1 Strategic Theme + Epic (`/safe-alm-requirements`) — include the R-TX Enabler Feature (§8.1)
 - [ ] 1.2 Features + NFR Features
@@ -703,3 +703,4 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | Read the way of working (6 skills, 23 agents, folder standard, trunk-based branching), Jot design system (W1–W12), and rnlab_aws (RN 0.85.3, Appium/Espresso on Device Farm). Found that the plugin has only the `lang-python-fastapi` stack profile. Drafted this plan. Waiting on the user. |
 | 2026-10-08 (cont.) | Clarifications: auth flow, Google federation (native Cognito → backlog), Lambda/DynamoDB/HTTP API rationale, no public API in dev, strict plugin conformance (§0, C-01…C-09), no Play Store deviation (C-05), tests on emulator → phone → Device Farm, Appium Python. D-01…D-05 confirmed. User restarting; resume at D-06. |
 | 2026-10-08 (session 3) | Answered all pending queries: D-06 local reminders (R-NOTIF caveat), D-07 online-only, D-08 OpenTofu, D-09 plain text, D-10, D-11, Q1 legacy free tier, Q2 981.77 min, Q3 Jot/com.jot.app, Q4 abalas4/notes-app, Q5 public repo, Q6 no licence. Added §1.3 deferred register (L-01…L-04), §2 rules 6 (stable versions) and 7 (public-repo hygiene), DynamoDB cost correction. P-03 done; next Phase 0.1. |
+| 2026-10-08 (session 3, cont.) | Phase 0.1 done: workspace split into `notes-app/` (repo) + `jot-design-source/` + local `CLAUDE.md`; repo files created; `git init` with origin; first commit with the noreply author email. Next: 0.2 push by user. |
