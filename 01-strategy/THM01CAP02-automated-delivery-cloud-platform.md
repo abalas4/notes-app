@@ -32,7 +32,7 @@ Dependencies     : AWS account (legacy free tier); GitHub repository settings (b
 Constraints      : OpenTofu, not Terraform (licence) — D-08; GitHub Actions with OIDC only;
                    one IAM role per workflow with a permissions boundary; Device Farm free minutes
                    are one-time; public repository; stable tool versions only.
-ALM Status       : Analysing
+ALM Status       : Portfolio Backlog
 DoR Check        : ✅ Stored at 01-strategy/THM01CAP02-<slug>.md
                    ✅ Parent Theme THM01 linked
                    ✅ Type Enabler
@@ -43,7 +43,7 @@ DoR Check        : ✅ Stored at 01-strategy/THM01CAP02-<slug>.md
                    ✅ ART identified
                    ✅ Business Owner and Architecture Owner named
                    ✅ Dependencies and constraints documented
-                   ⚠️ LBC approval — Product Owner approves THM01EPC02 in its pull request
+                   ✅ LBC approved — PR #1 (2026-10-08) for THM01EPC02
 DoD Check        : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

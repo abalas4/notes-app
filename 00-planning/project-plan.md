@@ -625,7 +625,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** user reviews and merges PR for branch `docs/THM01-strategy-and-epic` (1.1 artefacts; merge = Theme sponsor sign-off + Portfolio Kanban approval of both Epics). Then 1.2 Features + NFR Features.
+**Current phase:** Step 01 (requirements) · **Next step:** 1.2 Features + NFR Features via `/safe-alm-requirements` on branch `docs/THM01-features`. Sub-progress: not started.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -640,7 +640,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 - [x] P-03 **User confirms the technology stack** (D-01…D-11, Q1–Q6) — 2026-10-08
 - [x] 0.1 git init, `.gitignore`, `.gitattributes`, `.editorconfig`, `.pre-commit-config.yaml`, README, `.github/SECURITY.md`, `CODEOWNERS`, workspace `CLAUDE.md` (outside the repo); create `notes-app/` (repo) in the workspace, move `00-planning/` into it, move `design_style_guide/` → workspace `jot-design-source/` (C-02); structure check: nothing at the root outside §9 — done 2026-10-08 (commit `eda4450`; repo-local author = GitHub noreply email)
 - [x] 0.2 First push to https://github.com/abalas4/notes-app (public; repo created by user 2026-10-08) — done 2026-10-08: pushed; branch protection on `main` (PR required, approvals unticked per D-11, conversation resolution, no bypass, no force-push/deletion; status checks added when CI exists); pre-commit 4.6.2 + gitleaks hook installed and passing
-- [~] 1.1 Strategic Theme + Epic (`/safe-alm-requirements`) — include the R-TX Enabler Feature (§8.1) — **written 2026-10-08, awaiting PO approval in PR**: THM01, THM01CAP01 (Business), THM01CAP02 (Enabler), THM01EPC01 (Business, Android MVP), THM01EPC02 (Enabler, R-TX/R-AWS). Feature IDs reserved: FTR01–06 (EPC01), FTR07–09 (EPC02)
+- [x] 1.1 Strategic Theme + Epic (`/safe-alm-requirements`) — include the R-TX Enabler Feature (§8.1) — **done 2026-10-08 — approved and merged in PR #1 (`d7176c4`)**: THM01, THM01CAP01 (Business), THM01CAP02 (Enabler), THM01EPC01 (Business, Android MVP), THM01EPC02 (Enabler, R-TX/R-AWS). Feature IDs reserved: FTR01–06 (EPC01), FTR07–09 (EPC02)
 - [ ] 1.2 Features + NFR Features
 - [ ] 1.3 User Stories + ACs (story-reviewer findings resolved)
 - [ ] 1.4 Coverage audit (coverage-auditor)
@@ -695,6 +695,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | C-01/C-02 | **Folder standard across the board.** `project-plan.md` migrated into standard artefacts at Step 01 then deleted; design sources kept outside the repo and converted to `style-guide.md` + per-Feature UX snapshots; `CLAUDE.md` → `.claude/` | User |
 | 2026-10-08 | §9a | Repo lives in `notes-app/` inside the local workspace; `CLAUDE.md` and `jot-design-source/` sit in the workspace, outside git | User |
 | 2026-10-08 | 1.1 | Hierarchy: THM01 → CAP01 Business → EPC01 app MVP; CAP02 Enabler → EPC02 delivery automation (R-TX/R-AWS). Metrics: adoption ≥ 5 notes/week, reminders on time ≥ 99 %, crash-free ≥ 99.5 % / ANR ≤ 0.47 %, API cost ≤ US$1/month. Compliance Regimes: None. Roles shown as `Role (@abalas4)` | User |
+| 2026-10-08 | 1.1 | **Approved:** THM01 Approved; CAP01/CAP02 and EPC01/EPC02 → Portfolio Backlog (PR #1 merged) | User |
 | 2026-10-08 | — | §1.3 deferred-capabilities register (L-01…L-04) added | Claude |
 | 2026-10-08 | — | Mockups (wireframe.html W1–W12 + hi-fi canvas) validated as buildable in React Native; caveats → D-09, D-10 | Claude |
 

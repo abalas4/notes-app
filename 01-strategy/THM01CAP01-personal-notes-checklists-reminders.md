@@ -32,7 +32,7 @@ Dependencies     : THM01CAP02 (build, test and cloud delivery runway) must deliv
 Constraints      : Android first, iOS later from the same codebase; no Play Store distribution
                    (approved deviation C-05); online-only MVP (D-07); AWS always-free services
                    wherever possible; public repository.
-ALM Status       : Analysing
+ALM Status       : Portfolio Backlog
 DoR Check        : ✅ Stored at 01-strategy/THM01CAP01-<slug>.md
                    ✅ Parent Theme THM01 linked
                    ✅ Type Business
@@ -43,7 +43,7 @@ DoR Check        : ✅ Stored at 01-strategy/THM01CAP01-<slug>.md
                    ✅ ART identified
                    ✅ Business Owner and Architecture Owner named
                    ✅ Dependencies and constraints documented
-                   ⚠️ LBC approval — Product Owner approves THM01EPC01 in its pull request
+                   ✅ LBC approved — PR #1 (2026-10-08) for THM01EPC01
 DoD Check        : ⚠️ Not started
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
