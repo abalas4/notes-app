@@ -625,7 +625,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.2 Features + NFR Features via `/safe-alm-requirements` on branch `docs/THM01-features`. Sub-progress: not started.
+**Current phase:** Step 01 (requirements) · **Next step:** 1.2 Features + NFR Features via `/safe-alm-requirements` on branch `docs/THM01-features`. Sub-progress: ✅ FTR01–03 written · ⏳ FTR04 Labels, FTR05 Reminders, FTR06 API foundation, FTR10 Search/sort/filter/select (split from 'Organise and find'), FTR11–14 NFR (Security, Performance, Reliability, Observability) under EPC01 · ⏳ FTR07–09 under EPC02 · then update Epic linked-feature lists.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
