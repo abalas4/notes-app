@@ -626,7 +626,7 @@ Open questions:
 > **Resume rule:** at the start of every session, read this section first, continue from
 > "Next step", and update the checklist + session log after **every** completed step.
 
-**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). Branch `docs/THM01-pi1-planning`. Started 2026-10-08: tracker-tool decisions first.
+**Current phase:** Step 01 (requirements) · **Next step:** 1.5 PI-1 plan + PI release roadmap via `/safe-alm-release` (+ requirements `10-pi-planning.md`), address RAID-001…005, settle the parked backlog-tracker tool decisions, migrate this plan into standard artefacts (C-01). Branch `docs/THM01-pi1-planning`. Started 2026-10-08: tracker-tool decisions recorded; next: capacity inputs.
 
 ### Pending queries for the user (ask these on resume, in this order)
 | # | Query | Recommendation |
@@ -710,6 +710,7 @@ When all of these are answered: mark P-03 done, then Phase 0 (setup), then `/saf
 | 2026-10-08 | — | Mockups (wireframe.html W1–W12 + hi-fi canvas) validated as buildable in React Native; caveats → D-09, D-10 | Claude |
 | 2026-10-08 | 1.6a | **Order fixed: 1.6a style guide before 1.5 PI planning.** Feature DoR for [Mobile] Features needs the Approved style guide (+ SG-15); HLD/DFMEA/LLD stay as PI-1 Work Items (Feature DoR needs only their IDs). Conformance fix, not a deviation | User |
 | 2026-10-08 | 1.6a | **Style guide v1.0 Approved** with P-01 outline-strong `#857F76` for control boundaries · P-02 no Teal text on note colours · P-03 Ink-soft unchecked checkbox border · P-04 portrait only in MVP · P-05 empty / loading / error / offline patterns from Story copy · P-06 motion 150/250/300 ms, honour Remove animations · P-07 adaptive app icon + plain splash (artwork = `[DESIGN]` WI in slice 1) | User |
+| 2026-10-08 | 1.5 | Backlog tracker tool = **local workspace tooling** (outside git, reads the standard artefact folders only; no Story/ALM lifecycle). **One team** with one capacity; backlog views filtered by component (API / Mobile / Enabler) | User |
 
 ### Session log
 | Date | Session summary |
